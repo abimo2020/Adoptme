@@ -1,0 +1,656 @@
+.list-bg {
+    position: absolute;
+}
+
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+
+.listing__item {
+    -webkit-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.nice-scroll {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.listing__text__top {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.listing__text__top__left {
+    float: left;
+}
+
+.listing__text__top__left h5 {
+    font-size: 20px;
+    color: #323232;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.listing__text__top__left span {
+    font-size: 15px;
+    color: #707070;
+    display: inline-block;
+}
+
+.listing__text__top__right {
+    font-size: 15px;
+    color: #323232;
+    float: right;
+}
+
+.listing__text__top__right i {
+    font-size: 16px;
+    margin-left: 6px;
+}
+
+.listing {
+    width: 55%;
+    height: 100%;
+    padding: 0 40px;
+    padding-top: 140px;
+    overflow-y: auto;
+    float: left;
+}
+
+.listing .listing__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -30px;
+}
+
+.listing .listing__list .listing__item {
+    max-width: calc(50% - 30px);
+    float: left;
+    margin-right: 30px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.listing__item {
+    -webkit-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.listing__item__pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.listing__item__pic img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 30px;
+    bottom: -30px;
+    border-radius: 50%;
+}
+
+.listing__item__pic__tag {
+    font-size: 12px;
+    color: #ffffff;
+    background: #f03250;
+    font-weight: 600;
+    display: inline-block;
+    padding: 5px 15px 5px 10px;
+    border-radius: 2px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.listing__item__pic__tag.top_rate {
+    background: #00a7ea;
+}
+
+.listing__item__pic__tag.hot_deal {
+    background: #D9D137;
+}
+
+.listing__item__pic__btns {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.listing__item__pic__btns a {
+    font-size: 13px;
+    color: #ffffff;
+    height: 34px;
+    width: 34px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    line-height: 34px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.listing__item__pic__btns a:last-child {
+    margin-right: 0;
+}
+
+.listing__item__text {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+}
+
+.listing__item__text__inside h5 {
+    font-size: 20px;
+    color: #323232;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.listing__item__text__inside ul {
+    margin-bottom: 20px;
+}
+
+.listing__item__text__inside ul li {
+    font-size: 15px;
+    color: #323232;
+    list-style: none;
+    line-height: 25px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.listing__item__text__inside ul li span {
+    color: #A8A8A8;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.listing__item__text__rating {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.listing__item__text__rating .listing__item__rating__star {
+    float: left;
+}
+
+.listing__item__text__rating .listing__item__rating__star span {
+    font-size: 14px;
+    color: #F09D17;
+    margin-right: -3px;
+}
+
+.listing__item__text__rating .listing__item__rating__star span:last-child {
+    margin-right: 0;
+}
+
+.listing__item__text__rating h6 {
+    font-size: 15px;
+    color: #f03250;
+    font-weight: 600;
+    float: right;
+}
+
+.listing__item__text__info {
+    padding: 10px 30px;
+    border-top: 1px solid #e1e1e1;
+    overflow: hidden;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.listing__item__text__info__left {
+    float: left;
+}
+
+.listing__item__text__info__left img {
+    display: inline-block;
+    margin-right: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.listing__item__text__info__left span {
+    font-size: 14px;
+    color: #323232;
+    font-weight: 600;
+}
+
+.listing__item__text__info__right {
+    float: right;
+    font-size: 14px;
+    color: #50D437;
+    font-weight: 700;
+    padding-top: 4px;
+}
+
+.listing__item__text__info__right.closed {
+    color: #f03250;
+}
+
+.listing__map {
+    height: 100%;
+    width: 45%;
+    margin-top: 105px;
+    float: left;
+}
+
+.listing__map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------------
+  Listing Hero
+-----------------------*/
+
+.listing-hero {
+    padding-top: 230px;
+    padding-bottom: 40px;
+}
+
+.listing__hero__icon {
+    float: left;
+    margin-right: 30px;
+}
+
+.listing__hero__text {
+    overflow: hidden;
+}
+
+.listing__hero__text h2 {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.listing__hero__text p {
+    font-size: 15px;
+    color: #E1DEDE;
+}
+
+.listing__hero__text p span {
+    color: #a8a8a8;
+    margin-right: 5px;
+}
+
+.listing__hero__widget .listing__hero__widget__rating {
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.listing__hero__widget .listing__hero__widget__rating:before {
+    position: absolute;
+    right: -27px;
+    top: 11px;
+    height: 1px;
+    width: 4px;
+    background: #ffffff;
+    content: "";
+}
+
+.listing__hero__widget .listing__hero__widget__rating span {
+    font-size: 15px;
+    color: #F09D17;
+    margin-right: -3px;
+    display: inline-block;
+}
+
+.listing__hero__widget div {
+    font-size: 15px;
+    color: #E1DEDE;
+    display: inline-block;
+}
+
+.listing__hero__btns {
+    text-align: right;
+    padding-top: 85px;
+}
+
+.listing__hero__btns .primary-btn {
+    font-size: 15px;
+}
+
+.listing__hero__btns .primary-btn.share-btn {
+    background: rgba(255, 255, 255, 0.2);
+    margin-right: 6px;
+}
+
+.listing__hero__btns .primary-btn i {
+    margin-right: 5px;
+}
+
+/*---------------------
+  Listing Details
+-----------------------*/
+
+.listing__details__about {
+    margin-bottom: 35px;
+}
+
+.listing__details__about h4 {
+    color: #323232;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.listing__details__about p {
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+
+.listing__details__gallery {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 12px;
+    margin-bottom: 50px;
+}
+
+.listing__details__gallery h4 {
+    color: #323232;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.listing__details__gallery__item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.listing__details__gallery__item span {
+    display: block;
+    font-size: 15px;
+    color: #ffffff;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.listing__details__gallery__item span i {
+    margin-right: 5px;
+}
+
+.listing__details__gallery__item__large {
+    min-width: 100%;
+}
+
+.listing__details__gallery__slider img {
+    cursor: pointer;
+}
+
+.listing__details__amenities {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 12px;
+    margin-bottom: 20px;
+}
+
+.listing__details__amenities h4 {
+    color: #323232;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.listing__details__amenities__item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.listing__details__amenities__item h6 {
+    font-size: 15px;
+    color: #293A54;
+    margin-top: 6px;
+}
+
+.listing__details__rating {
+    margin-bottom: 50px;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 12px;
+}
+
+.listing__details__rating h4 {
+    color: #323232;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.listing__details__rating__overall {
+    text-align: center;
+    float: left;
+    margin-right: 75px;
+}
+
+.listing__details__rating__overall h2 {
+    font-size: 50px;
+    color: #323232;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.listing__details__rating__overall .listing__details__rating__star {
+    margin-bottom: 6px;
+}
+
+.listing__details__rating__overall .listing__details__rating__star span {
+    font-size: 16px;
+    color: #F09D17;
+    margin-right: -2px;
+    display: inline-block;
+}
+
+.listing__details__rating__overall span {
+    font-size: 15px;
+    color: #707070;
+}
+
+.listing__details__rating__bar {
+    overflow: hidden;
+}
+
+.listing__details__rating__bar__item {
+    margin-bottom: 5px;
+}
+
+.listing__details__rating__bar__item span {
+    font-size: 15px;
+    color: #323232;
+    display: inline-block;
+}
+
+.listing__details__rating__bar__item span.right {
+    float: right;
+}
+
+.listing__details__rating__bar__item .barfiller {
+    display: inline-block;
+    width: 460px;
+    margin-bottom: 0;
+    height: 8px;
+    border-radius: 50px;
+    border: none;
+    border-radius: 50px;
+    background: #efefef;
+    -webkit-box-shadow: inherit;
+    box-shadow: inherit;
+    margin-left: 10px;
+}
+
+.listing__details__rating__bar__item .barfiller .fill {
+    border-radius: 50px;
+}
+
+.listing__details__comment {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 12px;
+}
+
+.listing__details__comment h4 {
+    color: #323232;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.listing__details__comment__item {
+    margin-bottom: 40px;
+}
+
+.listing__details__comment__item__pic {
+    float: left;
+    margin-right: 25px;
+}
+
+.listing__details__comment__item__pic img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.listing__details__comment__item__text {
+    overflow: hidden;
+    position: relative;
+}
+
+.listing__details__comment__item__text .listing__details__comment__item__rating {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.listing__details__comment__item__text .listing__details__comment__item__rating i {
+    font-size: 16px;
+    color: #E9AA13;
+    margin-left: -2px;
+}
+
+.listing__details__comment__item__text span {
+    font-size: 13px;
+    color: #f03250;
+}
+
+.listing__details__comment__item__text h5 {
+    font-size: 20px;
+    color: #323232;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.listing__details__comment__item__text ul li {
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    color: #323232;
+    margin-right: 30px;
+}
+
+.listing__details__comment__item__text ul li:last-child {
+    margin-right: 0;
+}
+
+.listing__details__comment__item__text ul li i {
+    color: #a8a8a8;
+    margin-right: 3px;
+}
+
+.listing__details__review {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 12px;
+}
+
+.listing__details__review h4 {
+    color: #323232;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.listing__details__review form input {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    border: 1px solid #e1e1e1;
+    background: transparent;
+    font-size: 15px;
+    color: #a8a8a8;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.listing__details__review form input::-webkit-input-placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form input::-moz-placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form input:-ms-input-placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form input::-ms-input-placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form input::placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form textarea {
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    padding-top: 12px;
+    border: 1px solid #e1e1e1;
+    background: transparent;
+    font-size: 15px;
+    color: #a8a8a8;
+    border-radius: 2px;
+    resize: none;
+    margin-bottom: 24px;
+}
+
+.listing__details__review form textarea::-webkit-input-placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form textarea::-moz-placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form textarea:-ms-input-placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form textarea::-ms-input-placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form textarea::placeholder {
+    color: #a8a8a8;
+}
+
+.listing__details__review form button {
+    text-transform: none;
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 13px 38px 12px;
+}

@@ -1,0 +1,256 @@
+/*---------------------
+  Hero
+-----------------------*/
+
+.hero {
+    background-color: #f9f9ff;
+    padding: 300px 0;
+}
+
+.hero__text .section-title h2 {
+    color: black;
+}
+
+.hero__text .section-title p {
+    color: #A8A8A8;
+}
+
+.hero__text .hero__categories__tags {
+    text-align: center;
+}
+
+.hero__text .hero__categories__tags li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.hero__text .hero__categories__tags li:last-child {
+    margin-right: 0;
+}
+
+.hero__text .hero__categories__tags li a {
+    font-size: 15px;
+    color: black;
+    padding: 10px 25px 10px 20px;
+    display: block;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.hero__text .hero__categories__tags li a img {
+    margin-right: 5px;
+}
+
+.hero__search__form {
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero__search__form form input {
+    width: 40%;
+    float: left;
+    font-size: 15px;
+    color: #A8A8A8;
+    padding-left: 30px;
+    height: 54px;
+    border: none;
+}
+
+.hero__search__form form input::-webkit-input-placeholder {
+    color: #A8A8A8;
+}
+
+.hero__search__form form input::-moz-placeholder {
+    color: #A8A8A8;
+}
+
+.hero__search__form form input:-ms-input-placeholder {
+    color: #A8A8A8;
+}
+
+.hero__search__form form input::-ms-input-placeholder {
+    color: #A8A8A8;
+}
+
+.hero__search__form form input::placeholder {
+    color: #A8A8A8;
+}
+
+.hero__search__form form .select__option {
+    position: relative;
+    width: 22.5%;
+    float: left;
+    height: 54px;
+}
+
+.hero__search__form form .select__option:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #eeeeee;
+    content: "";
+    z-index: 1;
+}
+
+.hero__search__form form .select__option .nice-select {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    height: 54px;
+    line-height: 56px;
+}
+
+.hero__search__form form .select__option .nice-select span {
+    font-size: 15px;
+    color: #323232;
+}
+
+.hero__search__form form .select__option .nice-select .list {
+
+    border-radius: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+.hero__search__form form .select__option .nice-select:after {
+    border-right: 7px solid #183456;
+    border-top: 7px solid transparent;
+    height: 6px;
+    margin-top: 0;
+    right: 18px;
+    width: 10px;
+    border-bottom: none;
+    top: 40%;
+}
+
+.hero__search__form form button {
+    width: 15%;
+    height: 54px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    background: #f03250;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/*---------------------
+  Most Search Tab
+-----------------------*/
+
+.most-search {
+    padding-bottom: 70px;
+}
+
+.most__search__tab {
+    text-align: center;
+    border-bottom: 2px solid #e1e1e1;
+    margin-bottom: 50px;
+}
+
+.most__search__tab .nav {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.most__search__tab .nav-tabs {
+    border-bottom: none;
+}
+
+.most__search__tab .nav-tabs .nav-item {
+    margin-bottom: 0;
+    margin-right: 40px;
+}
+
+.most__search__tab .nav-tabs .nav-item:last-child {
+    margin-right: 0;
+}
+
+.most__search__tab .nav-tabs .nav-link {
+    font-size: 15px;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    color: #a8a8a8;
+    padding: 0 10px;
+    position: relative;
+}
+
+.most__search__tab .nav-tabs .nav-link:after {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    background: #f03250;
+    content: "";
+    opacity: 0;
+}
+
+.most__search__tab .nav-tabs .nav-link.active {
+    color: #f03250;
+}
+
+.most__search__tab .nav-tabs .nav-link.active:after {
+    opacity: 1;
+}
+
+.most__search__tab .nav-tabs .nav-link span {
+    margin-right: 3px;
+}
+
+/*---------------------
+  Work section
+-----------------------*/
+
+.work {
+    padding-bottom: 70px;
+    padding-top: 90px;
+    background: #f9f9f9;
+}
+
+.work.work-about {
+    background: transparent;
+}
+
+.work__item {
+    text-align: center;
+    -webkit-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 30px 40px 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background: #ffffff;
+}
+
+.work__item h5 {
+    font-size: 20px;
+    color: #323232;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.work__item p {
+    font-size: 15px;
+    color: #707070;
+    margin-bottom: 0;
+}
+
+.work__item__number {
+    font-size: 60px;
+    font-weight: 700;
+    color: #f03250;
+    opacity: 0.1;
+    position: absolute;
+    left: -16px;
+    top: -2px;
+}
