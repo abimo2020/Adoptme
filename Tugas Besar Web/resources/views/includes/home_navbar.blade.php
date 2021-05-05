@@ -2,13 +2,13 @@
     <div class="container main-menu">
         <div class="row align-items-center justify-content-between d-flex">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand" href="/">Cathub</a>
+                <a class="navbar-brand" href="/">Adoptme</a>
             </nav>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="/">Home</a></li>
-                    <li><a href="#fillDonatesCats">Cats Donate</a></li>
-                    <li><a href="#cardCats">Cats</a></li>
+                    <li><a href="#fillDonatesCats">Doggies</a></li>
+                    <li><a href="#cardCats">Catties</a></li>
                     <li><a href="#contactUs">Contact Us</a></li>
                     <li><a href="#testimonail">About Us</a></li>
                     <li>
@@ -25,7 +25,7 @@
                         @auth
                         <!-- Desktop Button -->
                         <div class="d-flex">
-                            <form class="form-inline" action="{{ route('admin.dashboard') }}" method="GET">
+                            <form class="form-inline" action="  " method="GET">
                                 @csrf
                                 <button style="margin-top: -7px; color: white" class="btn btn-login btn-navbar-right " type="submit">
                                     Admin

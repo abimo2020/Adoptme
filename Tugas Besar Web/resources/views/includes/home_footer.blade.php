@@ -34,7 +34,7 @@
                             <div class="detail">
                                 <h4>Indonesia</h4>
                                 <p>
-                                    Muhammadiyah Yogyakarta University
+                                    Universitas Negeri Malang
                                 </p>
                             </div>
                         </li>
@@ -54,7 +54,7 @@
                                 <span class="lnr lnr-envelope"></span>
                             </div>
                             <div class="detail">
-                                <h4>cathub@mail.co.id</h4>
+                                <h4>adoptme@gmail.co.id</h4>
                                 <p>
                                     Send us your query anytime!
                                 </p>
@@ -69,7 +69,7 @@
         <div class="container">
             <div class="row footer-bottom d-flex justify-content-between">
                 <p class="col-lg-8 col-sm-6 footer-text m-0 text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> By AnggaWikaNugraha
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> By Aryo Bimo, Elsa Dwi Rahma, and Indira Rahmawati
                 </p>
             </div>
         </div>

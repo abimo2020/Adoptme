@@ -16,7 +16,7 @@ use App\Http\Controllers\CattyController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.user.home');
 });
 
 Auth::routes();
