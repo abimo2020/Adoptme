@@ -7,7 +7,7 @@
           <!-- Nested Row within Card Body -->
           <div class="row">
             <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                <img style="width: 100%; border-radius:5px" class="img-fluid" src="{{ asset('img/catdog.jpeg') }}">
+                <img style="width: 100%; border-radius:5px" class="img-fluid" src="{{ asset('asset/img/c1.jpg') }}">
             </div>
             <div class="col-lg-6">
               <div class="p-5">
