@@ -15,11 +15,14 @@ class CreateCattiesTable extends Migration
     {
         Schema::create('catties', function (Blueprint $table) {
             $table->id();
-            $table->char('kode_kucing',4)->unique();
+            $table->char('kode_hewan',4)->unique()->nullable();
+            $table->char('jenis_hewan');
             $table->integer('usia');
-            $table->string('ras_kucing');
+            $table->string('jenis_kelamin');
+            $table->string('ras');
             $table->text('alamat');
             $table->text('deskripsi')->nullable();
+            $table->string('foto');
             $table->timestamps();
         });
     }

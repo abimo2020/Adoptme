@@ -29,7 +29,7 @@
                 <h1>Apakah kamu menemukan kucing malang ?</h1>
             </div>
             <div class="col-lg-4 callto-top-right">
-                <a href="{{ url('donate') }}" class="primary-btn" style="border-radius: 5px">tambahkan kucing</a>
+                <a href="{{ route('user.create') }}" class="primary-btn" style="border-radius: 5px">tambahkan kucing</a>
             </div>
         </div>
     </div>

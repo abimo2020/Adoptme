@@ -10,4 +10,10 @@ class UserController extends Controller
         $user = Auth::user();
         return view('pages.user.home',compact('user'));
     }
+    public function create(){
+        return view('pages.user.create');
+    }
+    public function store(){
+        return redirect('/');
+    }
 }

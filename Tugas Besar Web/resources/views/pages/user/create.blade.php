@@ -13,58 +13,51 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <form class="col-lg-9" method="POST" action="{{ route('home.store')}}" enctype="multipart/form-data" >
+            <form class="col-lg-9" method="POST" action="{{ route('user.store')}}" enctype="multipart/form-data" >
                 @csrf
                 <div class="form-group">
-                    <label for="first-name">Jenis Kucing</label>
-                    <input
-                        type="text"
-                        name="jenis_kucing"
-                        value="{{ old('jenis_kucing') }}"
-                        class="form-control"
-                        placeholder="Jenis Kucing">
-                        @error('jenis_kucing') <div class="text-muted">{{ $message }}</div> @enderror
-                </div>
-                {{-- jenis_kelamin--}}
-                <div class="form-group">
-                    <label for="jenis_kelamin" class="form-control-label">Jenis Kelamin</label>
-
-                    <br/>
-
+                    <label for="jenis_hewan" class="form-control-label">Jenis Hewan</label><br/>
                     <label>
-                        <input
-                            type="radio"
-                            name="jenis_kelamin"
-                            value="Jantan"
-                            class="form-control @error('jenis_kelamin') is-invalid @enderror"/> Jantan
+                        <input type="radio" name="jenis_hewan" value="Kucing" class="form-control @error('jenis_hewan') is-invalid @enderror"/> Kucing
+                    </label>&nbsp;
+                    <label>
+                        <input type="radio" name="jenis_hewan" value="Anjing" class="form-control @error('jenis_hewan') is-invalid @enderror" /> Anjing
                     </label>
-
-                    &nbsp;
-
+                    @error('jenis_hewan') <div class="text-muted">{{ $message }}</div> @enderror
+                </div>
+                <div class="form-group">
+                    <label for="ras">Ras</label>
+                    <input type="text" id="ras"name="ras" value="{{ old('ras') }}" class="form-control" placeholder="Ras Hewan">@error('ras') <div class="text-muted">{{ $message }}</div> @enderror
+                </div>
+                <div class="form-group">
+                    <label for="usia">Usia</label>
+                    <input type="text" id="usia"name="usia" value="{{ old('usia') }}" class="form-control" placeholder="Usia">@error('usia') <div class="text-muted">{{ $message }}</div> @enderror
+                </div>
+                <div class="form-group">
+                    <label for="jenis_kelamin" class="form-control-label">Jenis Kelamin</label><br/>
                     <label>
-                        <input
-                            type="radio"
-                            name="jenis_kelamin"
-                            value="Betina"
-                            class="form-control @error('jenis_kelamin') is-invalid @enderror" /> Betina
+                        <input type="radio" name="jenis_kelamin" value="Jantan" class="form-control @error('jenis_kelamin') is-invalid @enderror"/> Jantan
+                    </label>&nbsp;
+                    <label>
+                        <input type="radio" name="jenis_kelamin" value="Betina" class="form-control @error('jenis_kelamin') is-invalid @enderror" /> Betina
                     </label>
                     @error('jenis_kelamin') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>
-
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror" id="alamat" rows="5"placeholder="Tuliskan alamat">
+                    </textarea>
+                </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea
-                        name="deskripsi"
-                        class="form-control @error('deskripsi') is-invalid @enderror"
-                        id="deskripsi"
-                        rows="5"placeholder="Write message">
+                    <textarea name="deskripsi`" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
                     </textarea>
                 </div>
                 <div class="form-group">
                     <div class="row">
-                     <label class="col-md-4" >Select Profile Image</label>
+                     <label class="col-md-4">Pilih Foto</label>
                      <div class="col-md-8">
-                      <input type="file" name="image" />
+                      <input type="file" name="foto" />
                      </div>
                     </div>
                    </div>
