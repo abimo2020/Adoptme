@@ -17,13 +17,16 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('pages.user.home');
-});
+})->name('index');
 
 Auth::routes();
 Route::middleware(['auth'])->group(function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/donasi-kucing',[UserController::class,'create'])->name('user.create');
-    Route::post('/',[UserController::class,'store'])->name('user.store');
+    Route::get('/donasi-hewan',[UserController::class,'create'])->name('user.create');
+    Route::post('/',[UserController::class,'storeCreate'])->name('user.storeCreate');
+    Route::get('/adopsi-kucing',[UserController::class,'adopt'])->name('user.adopt');
+    Route::get('/tes',[UserController::class,'tes']);
+
     Route::middleware(['admin'])->group(function(){
         Route::get('admin',[AdminController::class,'index']);
     });

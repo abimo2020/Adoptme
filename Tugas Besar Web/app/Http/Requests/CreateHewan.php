@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TambahKucing extends FormRequest
+class CreateHewan extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class TambahKucing extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,9 +24,9 @@ class TambahKucing extends FormRequest
     public function rules()
     {
         return [
-            'kode_hewan' => 'required|size:4|unique:catties',
             'jenis_hewan' => 'required',
             'usia' => 'required|integer',
+            'jenis_kelamin' =>'required',
             'ras' => 'required',
             'alamat' => 'required',
             'deskripsi' => '',

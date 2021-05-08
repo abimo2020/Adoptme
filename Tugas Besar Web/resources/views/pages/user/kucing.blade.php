@@ -28,12 +28,12 @@
                     <h1 class="mb-20">Detail Kucing</h1>
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center">
-                    <div class="image" style="border-radius: 15px"><img src="/home_image/{{ $item->id }}" alt="sample4"/></div>
+                    <div class="image" style="border-radius: 15px"><img src="/home_image/{{-- $item->id --}}" alt="sample4"/></div>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
-            <form class="col-lg-9" action="{{ route('homeKucing', $item->id)}}" method="POST">
+            <form class="col-lg-9" {{--action="{{ route('homeKucing', $item->id)}}"--}} method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="first-name">Jenis Kucing</label>
@@ -41,7 +41,7 @@
                     disabled
                         type="text"
                         name="jenis_kucing"
-                        value="{{ $item->jenis_kucing }}"
+                        {{--value="{{ $item->jenis_kucing }}"--}}
                         class="form-control"
                         placeholder="Jenis Kucing">
                 </div>
@@ -52,14 +52,14 @@
                     <br/>
 
                     <label>
-                        <input disabled {{ $item->jenis_kelamin == "Jantan" ? "checked" : "" }} type="radio" name="jenis_kelamin" value="Jantan"
+                        <input disabled {{-- $item->jenis_kelamin == "Jantan" ? "checked" : "" --}} type="radio" name="jenis_kelamin" value="Jantan"
                             class="form-control/> Jantan
                     </label>
 
                     &nbsp;
 
                     <label>
-                        <input disabled {{ $item->jenis_kelamin == "Betina" ? "checked" : "" }} type="radio" name="jenis_kelamin" value="Betina"
+                        <input disabled {{-- $item->jenis_kelamin == "Betina" ? "checked" : "" --}} type="radio" name="jenis_kelamin" value="Betina"
                             class="form-control /> Betina
                     </label>
                 </div>
@@ -70,7 +70,7 @@
                 <br />
 
                 <label>
-                    <input {{ $item->is_adopted == "1" ? "checked" : "" }} type="radio" name="is_adopted" value="1"
+                    <input {{-- $item->is_adopted == "1" ? "checked" : "" --}} type="radio" name="is_adopted" value="1"
                     class="form-control" />saya bersedia
                 </label>
                     &nbsp;
@@ -87,7 +87,7 @@
                     <input
                     disabled
                         type="text"
-                        value="{{ $item->deskripsi }}"
+                        value="{{-- $item->deskripsi --}}"
                         class="form-control"
                         placeholder="Jenis Kucing">
                 </div>
