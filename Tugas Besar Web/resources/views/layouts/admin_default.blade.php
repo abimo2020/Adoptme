@@ -59,6 +59,15 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Data Kucing Kami :</h6>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                  aria-controls="collapseTwo">
+                  <i class="fas fa-paw"></i>
+                  <span>Data Anjing</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                  <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Data Anjing Kami :</h6>
             {{-- <a class="collapse-item" href="{{ route('admin.index')}}">Data Kucing</a> --}}
           </div>
         </div>

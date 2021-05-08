@@ -15,9 +15,15 @@ use App\Http\Controllers\UserController;
 |
 */
 
+
 Route::get('/', function () {
     return view('pages.user.home');
 });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 
 Auth::routes();
 Route::middleware(['auth'])->group(function(){
@@ -32,4 +38,10 @@ Route::middleware(['auth'])->group(function(){
         redirect('/');
     });
 });
+
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('catty', CattyController::class);
+Route::resource('doggy', DoggyController::class);
 
