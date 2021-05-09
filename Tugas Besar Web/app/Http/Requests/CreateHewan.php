@@ -29,7 +29,7 @@ class CreateHewan extends FormRequest
             'jenis_kelamin' =>'required',
             'ras' => 'required',
             'alamat' => 'required',
-            'deskripsi' => '',
+            'deskripsi' => 'required',
             'foto' => 'required|file|mimes:png,jpg,jpeg|image|max:2000'
         ];
     }

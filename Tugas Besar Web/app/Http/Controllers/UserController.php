@@ -5,12 +5,13 @@ use App\Models\Pet;
 use App\Http\Requests\CreateHewan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 
 {
     public function index(){
-        $user = Auth::user();
-        return view('pages.user.home',compact('user'));
+        $items = Pet::all();
+        return view('pages.user.home')->with(['items' => $items]);
     }
     public function create(){
         return view('pages.user.create');
@@ -31,7 +32,11 @@ class UserController extends Controller
         $pet->save();
         return redirect()->route('index');
     }
-    public function tes(){
-        return view('pages.user.create_pic');
+    public function tes(CreateHewan $item){
+        return view('pages.user.create_pic',);
+    }
+    public function show(Pet $item){
+
+        return view('pages.user.kucing')->with('item',$item);
     }
 }

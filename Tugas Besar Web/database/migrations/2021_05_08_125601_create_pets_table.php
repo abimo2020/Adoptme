@@ -22,7 +22,7 @@ class CreatePetsTable extends Migration
             $table->string('ras');
             $table->text('alamat');
             $table->text('deskripsi');
-            $table->boolean('adopted')->nullable();
+            $table->boolean('adopted')->default(false);
             $table->string('foto');
             $table->timestamps();
         });
