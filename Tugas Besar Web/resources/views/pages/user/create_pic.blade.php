@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <form action="{{ route('home.store_pic')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('user.storeCreate')}}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div>
@@ -21,8 +21,8 @@
                   style="display:none"
                     type="text"
                     name="kucing_id"
-                    value="{{ $kucing_id }}"
-                    id=" kucing_id"
+                    value="{{old('kode_hewan')}}"
+                    id="kode_hewan"
                     placeholder="Masukkan Jenis Kucing" required>
                     @error('kucing_id') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>

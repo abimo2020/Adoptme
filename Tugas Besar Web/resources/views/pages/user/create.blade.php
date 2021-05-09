@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <form class="col-lg-9" method="POST" action="{{ route('user.store')}}" enctype="multipart/form-data" >
+            <form class="col-lg-9" method="POST" action="{{ route('user.storeCreate')}}" enctype="multipart/form-data" >
                 @csrf
                 <div class="form-group">
                     <label for="jenis_hewan" class="form-control-label">Jenis Hewan</label><br/>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi`" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
+                    <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
                     </textarea>
                 </div>
                 <div class="form-group">

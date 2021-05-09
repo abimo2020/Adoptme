@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
+<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('pages.user.home');
@@ -25,11 +26,17 @@ Route::get('/', function () {
 // });
 
 
+=======
+Route::get('/',[UserController::class,'index'])->name('user.index');
+>>>>>>> master
 Auth::routes();
 Route::middleware(['auth'])->group(function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/donasi-kucing',[UserController::class,'create'])->name('user.create');
-    Route::post('/',[UserController::class,'store'])->name('user.store');
+    Route::get('/donasi-hewan',[UserController::class,'create'])->name('user.create');
+    Route::post('/',[UserController::class,'storeCreate'])->name('user.storeCreate');
+    Route::get('/adopsi-kucing',[UserController::class,'adopt'])->name('user.adopt');
+    Route::get('/tes',[UserController::class,'tes']);
+    Route::get('/detail/{item}',[UserController::class,'show'])->name('user.show');
     Route::middleware(['admin'])->group(function(){
         Route::get('admin',[AdminController::class,'index']);
     });

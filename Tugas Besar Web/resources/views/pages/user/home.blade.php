@@ -40,29 +40,30 @@
 <section class="cat-list-area section-gap" id="cardCats">
     <div class="container">
         <div class="row">
-            {{-- @foreach ($items->where('is_approved', '1') as $item)
+            {{-- @foreach ($items->where('is_approved', '1') as $item)--}}
+            @foreach($items as $item)
             <div class="col-6 col-sm-6 col-md-4 col-lg-3" style="display: flex; justify-content: center">
 
                 <div class="card mt-4" style="width: 17rem;">
-                    <img style="max-width: 100% ; max-height: 250px; background-size: cover" src="/home_image/{{ $item->id }}"   class="card-img-top">
+                    <img style="max-width: 100% ; max-height: 250px; background-size: cover" src="{{asset('storage/'.$item->foto)}}"   class="card-img-top">
                     <div class="listing__item__pic set-bg">
-                        <div class="listing__item__pic__tag">{{ $item->is_adopted ? 'Adopted' : 'Available'  }}</div>
+                        <div class="listing__item__pic__tag">{{ $item->adopted ? 'Adopted' : 'Available'  }}</div>
                     </div>
                     <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between">
                         <div>
-                            <h4 class="card-title">{{ $item->jenis_kucing }}</h4>
+                            <h4 class="card-title">{{ $item->ras }}</h4>
                             <hr/>
                             <h6 class="card-title">{{ $item->jenis_kelamin }}</h6>
 
                             <p class="card-text" style="font-size: 13px">{{ $item->deskripsi }}</p>
                         </div>
-                        <a href="/kucing/{{$item->id }}" class="listing__item__text__info__right">
+                        <a href="{{route('user.show',$item->id)}}" class="listing__item__text__info__right">
                         Lihat Detail
                     </a>
                     </div>
                   </div>
             </div>
-            @endforeach --}}
+            @endforeach
         </div>
     </div>
 </section>
