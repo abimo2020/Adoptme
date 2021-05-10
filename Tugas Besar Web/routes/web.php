@@ -15,7 +15,6 @@ use App\Http\Controllers\UserController;
 |
 */
 
-<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('pages.user.home');
@@ -25,10 +24,7 @@ Route::get('/', function () {
 //     return view('welcome');
 // });
 
-
-=======
 Route::get('/',[UserController::class,'index'])->name('user.index');
->>>>>>> master
 Auth::routes();
 Route::middleware(['auth'])->group(function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -45,10 +41,4 @@ Route::middleware(['auth'])->group(function(){
         redirect('/');
     });
 });
-
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::resource('catty', CattyController::class);
-Route::resource('doggy', DoggyController::class);
 
