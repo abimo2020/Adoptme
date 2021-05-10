@@ -30,7 +30,7 @@ class UserController extends Controller
         $pet->deskripsi = $validatedData['deskripsi'];
         $pet->foto = $validatedData['foto']->store('foto','public');
         $pet->save();
-        return redirect()->route('index');
+        return redirect()->route('user.index');
     }
     public function tes(CreateHewan $item){
         return view('pages.user.create_pic',);
