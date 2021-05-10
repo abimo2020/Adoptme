@@ -7,14 +7,15 @@
         <div class="row fullscreen d-flex align-items-center justify-content-start">
             <div class="banner-content col-lg-8 col-md-12">
                 <h1 class="text-uppercase">
-                    Tolong adopsi kami. <br>
-                    Kami butuh sedikit perhatian anda.
+                    AdoptMe membantu <br>
+                    Kucing dan Anjing untuk
+                    menemukan rumahnya.
                 </h1>
                 <p class="text-white sub-head">
                     Kami akan membantu anda untuk menemukan kucing kesayangan anda
                 </p>
-                <a href="#cardCats" class="primary-btn header-btn text-uppercase">Find A Cat To Adopt</a>
-                <a href="#fillDonatesCats" class="mt-3 primary-btn header-btn text-uppercase">Donate A Cat</a>
+                <a href="#cardCats" class="primary-btn header-btn text-uppercase" >Adopsi Hewan</a>
+                <a href="#fillDonatesCats" class="mt-3 primary-btn header-btn text-uppercase">Donasi Hewan</a>
             </div>
         </div>
     </div>
@@ -26,7 +27,7 @@
     <div class="container">
         <div class="row justify-content-between align-items-center callto-top-wrap pt-40 pb-40 shadow-lg">
             <div class="col-lg-8 callto-top-left">
-                <h1>Apakah kamu menemukan kucing malang ?</h1>
+                <h1>Apakah kamu menemukan kucing atau anjing di dekat anda?</h1>
             </div>
             <div class="col-lg-4 callto-top-right">
                 <a href="{{ route('user.create') }}" class="primary-btn" style="border-radius: 5px">tambahkan kucing</a>
@@ -72,17 +73,17 @@
 <!-- Start process Area -->
 <section class="process-area section-gap">
     <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-60 col-lg-8">
-                <div class="title text-center">
-                    <h1 class="mb-10">Process to adopt a cat</h1>
+        <div class="row d-flex justify-content-center" >
+            <div class="menu-content pb-60 col-lg-8" >
+                <div class="title text-center" >
+                    <h1 class="mb-10" >Process to adopt a cat</h1>
                 </div>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-lg-3 col-md-6">
                 <div class="single-process" style="display: flex; flex-direction: column; align-items: center">
-                    <span class="lnr lnr-thumbs-up"></span>
+                   <a data-toggle="modal" data-target="#exampleModal"> <span class="lnr lnr-thumbs-up" ></span></a>
                     <h4>
                         Pet Selection
                     </h4>
@@ -115,7 +116,7 @@
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">Contact Us</h1
+                    <h1 class="mb-10">Contact Us</h1>
                 </div>
             </div>
         </div>
@@ -147,7 +148,7 @@
                 <div class="single-process">
                     <span class="lnr lnr-envelope"></span>
                     <h4>
-                        cathub@mail.co.id
+                        adoptme@gmail.com
                     </h4>
                     </a>
                     <p>
@@ -217,6 +218,16 @@
     </div>
 </section>
 <!-- End testomial Area -->
+<section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Anda Perlu <b>Login</b> Untuk Melihat dan Memilih Hewan</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+</section>
 
 <!-- Start calltoaction Area -->
 <section class="calltoaction-area section-gap relative">

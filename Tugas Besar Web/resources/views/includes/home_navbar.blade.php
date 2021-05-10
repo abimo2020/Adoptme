@@ -6,11 +6,11 @@
             </nav>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="/">Home</a></li>
-                    <li><a href="#fillDonatesCats">Doggies</a></li>
-                    <li><a href="#cardCats">Catties</a></li>
-                    <li><a href="#contactUs">Contact Us</a></li>
-                    <li><a href="#testimonail">About Us</a></li>
+                    <li class="menu-active"><a href="/">Beranda</a></li>
+                    <li><a href="#fillDonatesCats">Adopsi </a></li>
+                    <li><a href="#cardCats">Donasi </a></li>
+                    <li><a href="#contactUs">Hubungi Kami</a></li>
+                    <li><a href="#testimonail">Tentang Kami</a></li>
                     <li>
                         @guest
                         <!-- Desktop Button -->

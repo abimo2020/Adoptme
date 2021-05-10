@@ -4,28 +4,28 @@
         <div class="row pt-120 pb-80">
             <div class="col-lg-4 col-md-6">
                 <div class="single-footer-widget">
-                    <h6>About Us</h6>
+                    <h6>Tentang Kami</h6>
                     <p>
-                        Kucing, dalam bahasa latinnya Felis silvestris catus, adalah hewan karnivora. Kucing telah berbaur dengan kehidupan manusia paling tidak sejak 6.000 tahun SM, dari kerangka kucing di Pulau Siprus. Orang Mesir Kuno dari 3.500 SM telah menggunakan kucing untuk menjauhkan tikus atau hewan pengerat lain dari lumbung penyimpan hasil panen.
+                        Berawal dari keresahan kami saat melihat hewan khususnya kucing dan anjing yang terlantar di jalanan. Tidak jarang mereka diperlakukan tidak baik oleh ornag sekitarnya.
+                        banyak orang di luar sana yang ingin merawat kucing maupun anjing jalanan. Disinilah peran kami untuk menjembatani kucing maupun anjing untuk bertemu orang baik yang ingin merawatnya.
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="single-footer-widget">
-                    <h6>Useful Links</h6>
+                    <h6>links</h6>
                     <div class="row">
                         <ul class="col footer-nav">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Case Study</a></li>
+                            <li><a href="#">Beranda</a></li>
+                            <li><a href="#">Layanan</a></li>
+                            <li><a href="#">Tentang Kami</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4  col-md-6">
                 <div class="single-footer-widget mail-chimp">
-                    <h6 class="mb-20">Contact Us</h6>
+                    <h6 class="mb-20">Hubungi Kami</h6>
                     <ul class="list-contact">
                         <li class="flex-row d-flex">
                             <div class="icon">
@@ -54,9 +54,9 @@
                                 <span class="lnr lnr-envelope"></span>
                             </div>
                             <div class="detail">
-                                <h4>adoptme@gmail.co.id</h4>
+                                <h4>adoptme@gmail.com</h4>
                                 <p>
-                                    Send us your query anytime!
+                                    Kirimkan pertanyaan Anda kapan saja!
                                 </p>
                             </div>
                         </li>
@@ -69,7 +69,7 @@
         <div class="container">
             <div class="row footer-bottom d-flex justify-content-between">
                 <p class="col-lg-8 col-sm-6 footer-text m-0 text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> By Aryo Bimo, Elsa Dwi Rahma, and Indira Rahmawati
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> By Aryo Bimo, Elsa Dwi Sabrina, and Indira Rahmawati
                 </p>
             </div>
         </div>

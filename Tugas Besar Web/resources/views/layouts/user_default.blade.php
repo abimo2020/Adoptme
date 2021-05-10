@@ -18,7 +18,7 @@
 	<title>Adoptme</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="asset/css/detail.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/asset/css/detail.css')}}">
     <!-- Styles -->
     <link href="{{ asset('css/detail.css') }}" rel="stylesheet">
 	<!--
