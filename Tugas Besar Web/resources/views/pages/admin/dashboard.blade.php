@@ -19,7 +19,7 @@
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
               <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Kucing Ditemukan</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_kucing_yang_ada }}</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_hewan}}</div>
             </div>
             <div class="col-auto">
               <i class="fas fa-check fa-2x text-gray-300"></i>
@@ -36,7 +36,7 @@
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
               <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Kucing Belum Adopsi</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_kucing_belum_adopsi }}</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $hewan_belum_teradopsi }}</div>
             </div>
             <div class="col-auto">
               <i class="fas fa-cat fa-2x text-gray-300"></i>
@@ -53,7 +53,7 @@
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
               <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Kucing Sudah Diadopsi</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_kucing_sudah_adopsi }}</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $hewan_teradopsi }}</div>
             </div>
             <div class="col-auto">
               <i class="fas fa-home fa-2x text-gray-300"></i>
@@ -64,21 +64,7 @@
     </div>
 
     <!-- Pending Requests Card Example -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-warning shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Kucing Belum Diapprove</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_approval_yang_belum }}</div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-home fa-2x text-gray-300"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
 
   </div>

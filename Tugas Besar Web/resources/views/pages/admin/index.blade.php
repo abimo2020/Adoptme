@@ -6,8 +6,8 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-      <h1 class="h3 mb-0 text-gray-800">Data Kucing</h1>
-      {{-- <a href="{{ route('admin.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">+ Tambah Data Kucing</a> --}}
+      <h1 class="h3 mb-0 text-gray-800">Data Hewan</h1>
+      <a href="{{ route('admin.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Tambah Hewan</a>
 
     </div>
 
@@ -22,37 +22,43 @@
             <thead>
               <tr>
                 <th>No.</th>
-                <th>Jenis Kucing</th>
+                <th>Kode Hewan</th>
+                <th>Jenis Hewan</th>
                 <th>Jenis Kelamin</th>
+                <th>Ras</th>
+                <th>Usia</th>
                 <th>Deskripsi</th>
                 <th>Status</th>
-                <th>Approval</th>
-                <th>Actions</th>
+                <th>Alamat</th>
+                <th>Foto</th>
               </tr>
             </thead>
 
             <tbody>
-              {{-- @foreach ($items as $item)
+              @foreach ($item as $item)
                 <tr>
-                  <td>{{ $item->id }}</td>
-                  <td>{{ $item->jenis_kucing }}</td>
+                  <td>{{$loop->iteration}}</td>
+                  <td>{{ $item->kode_hewan}}</td>
+                  <td>{{ $item->jenis_hewan }}</td>
                   <td>{{ $item->jenis_kelamin }}</td>
+                  <td>{{ $item->ras}}</td>
+                  <td>{{ $item->usia}}</td>
                   <td>{{ $item->deskripsi }}</td>
-                  <td>{{ $item->is_adopted ? 'Adopted' : 'Available' }}</td>
-                  <td>{{ $item->is_approved ? 'Approved' : 'Not Approved' }}</td>
+                  <td>{{ $item->adopted ? 'Sudah diadopsi' : 'Belum diadopsi' }}</td>
+                  <td>{{ $item->alamat}}</td>
                   <td>
-                    <img src="{{ $item->galleries()->where('kucing_id', '=' , $item->id)->first()->photo }}" alt="" width="30%">
+                    <img src="{{asset('storage/'.$item->foto)}}" alt="" width="20%">
                   </td>
                   <td>
                     <div class="row justify-content-center">
-                      <a href="{{ route('admin.edit', $item->id)}}" class="btn btn-info mx-3"><i class="fas fa-pencil-alt"
+                      <a href="{{ route('admin.edit',$item->id)}}" class="btn btn-info mx-3"><i class="fas fa-pencil-alt"
                           aria-hidden="true"></i>
                       </a>
 
-                      <form action="{{ route('admin.destroy', $item->id) }}" method="POST"
+                      <form action="{{route('admin.destroy',['item'=>$item->id])}}" method="POST"
                         class="d-inline">
                         @csrf
-                        @method('delete')
+                        @method('DELETE')
                         <button class="btn btn-danger btn-sm">
                             <i class="fa fa-trash"></i>
                         </button>
@@ -60,7 +66,7 @@
                     </div>
                   </td>
                 </tr>
-              @endforeach --}}
+              @endforeach
             </tbody>
           </table>
         </div>

@@ -17,7 +17,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(Auth::user()->role!="admin"){
-            return redirect()->to('logout');
+            return redirect()->route('user.index');
         }
         return $next($request);
     }

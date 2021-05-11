@@ -12,19 +12,19 @@
       <h6 class="m-0 font-weight-bold text-warning">Tambah Data Kucing</h6>
     </div>
     <div class="card-body">
-      <form action="{{ route('admin.store')}}" method="POST">
+      <form action="" method="POST">
         @csrf
         {{-- jenis_kucing --}}
         <div class="form-group">
-          <label for="jenis_kucing">Jenis Kucing</label>
-          <input 
+          <label for="jenis_kucing">Jenis Hewan</label>
+          <input
             type="text"
-            name="jenis_kucing" 
-            value="{{ old('jenis_kucing') }}"
-            class="form-control @error('jenis_kucing') is-invalid  @enderror" 
-            id=" jenis_kucing"
-            placeholder="Masukkan Jenis Kucing" required>
-            @error('jenis_kucing') <div class="text-muted">{{ $message }}</div> @enderror
+            name="jenis_hewan"
+            value="{{ old('jenis_hewan') }}"
+            class="form-control @error('jenis_hewan') is-invalid  @enderror"
+            id=" jenis_hewan"
+            placeholder="Masukkan jenis hewan" required>
+            @error('jenis_hewan') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
         {{-- jenis_kelamin--}}
         <div class="form-group">
@@ -33,9 +33,9 @@
           <br/>
 
           <label>
-              <input 
+              <input
                   type="radio"
-                  name="jenis_kelamin" 
+                  name="jenis_kelamin"
                   value="Jantan"
                   class="form-control @error('jenis_kelamin') is-invalid @enderror"/> Jantan
           </label>
@@ -44,9 +44,9 @@
 
           <label>
               <input
-                  type="radio" 
-                  name="jenis_kelamin"                           
-                  value="Betina" 
+                  type="radio"
+                  name="jenis_kelamin"
+                  value="Betina"
                   class="form-control @error('jenis_kelamin') is-invalid @enderror" /> Betina
           </label>
           @error('jenis_kelamin') <div class="text-muted">{{ $message }}</div> @enderror
@@ -54,7 +54,7 @@
       {{-- deskripsi --}}
         <div class="form-group">
           <label for="deskripsi">Deskripsi</label>
-          <textarea 
+          <textarea
             name="deskripsi"
             class="form-control @error('deskripsi') is-invalid @enderror"
             id="deskripsi"

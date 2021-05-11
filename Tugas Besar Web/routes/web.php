@@ -15,7 +15,6 @@ use App\Http\Controllers\UserController;
 |
 */
 
-<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('pages.user.home');
@@ -24,15 +23,7 @@ Route::get('/', function () {
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
-<<<<<<< Updated upstream
 Route::get('/',[UserController::class,'index'])->name('user.index');
-=======
-
-=======
-Route::get('/',[UserController::class,'index'])->name('user.index');
->>>>>>> master
->>>>>>> Stashed changes
 Auth::routes();
 Route::middleware(['auth'])->group(function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -42,7 +33,12 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/tes',[UserController::class,'tes']);
     Route::get('/detail/{item}',[UserController::class,'show'])->name('user.show');
     Route::middleware(['admin'])->group(function(){
-        Route::get('admin',[AdminController::class,'index']);
+        Route::get('admin',[AdminController::class,'index'])->name('admin.index');
+        Route::get('/admin-dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+        Route::get('/admin-tambah-data',[AdminController::class,'create'])->name('admin.create');
+        Route::get('/admin-edit-{item}',[AdminController::class,'edit'])->name('admin.edit');
+        Route::patch('/admin-update',[AdminController::class,'update'])->name('admin.update');
+        Route::delete('/admin-delete-{item}',[AdminController::class,'destroy'])->name('admin.destroy');
     });
     Route::get('logout',function(){
         Auth::logout();

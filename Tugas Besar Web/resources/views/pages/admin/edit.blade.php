@@ -13,11 +13,11 @@
     </div>
     <div class="card-body">
       <form action="{{ route('admin.update', $item->id)}}" method="POST">
-        @method('put')
+        @method('PATCH')
         @csrf
         {{-- jenis_kucing --}}
         <div class="form-group">
-          <label for="jenis_kucing">Jenis Kucing</label>
+          <label for="jenis_kucing">Jenis Hewan</label>
           <input type="text" name="jenis_kucing" value="{{ old('jenis_kucing') ? old('jenis_kucing') : $item->jenis_kucing}}"
               class="form-control @error('jenis_kucing') is-invalid  @enderror" id=" jenis_kucing"
               placeholder="Masukkan Jenis Kucing" required>

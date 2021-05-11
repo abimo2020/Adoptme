@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Cathub - Dashboard</title>
+  <title>Adoptme - Dashboard</title>
   @stack('admin-before-style')
   @include('includes.styles')
   @stack('admin-after-style')
@@ -24,11 +24,11 @@
     <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      {{-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home')}}"> --}}
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('user.index')}}">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Cathub</div>
+        <div class="sidebar-brand-text mx-3">Adoptme</div>
       </a>
 
       <!-- Divider -->
@@ -36,7 +36,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        {{-- <a class="nav-link" href="{{ route('admin.dashboard')}}"> --}}
+        <a class="nav-link" href="{{ route('admin.dashboard')}}">
           <i class="fas fa-tv"></i>
           <span>Dashboard</span></a>
       </li>
@@ -46,7 +46,7 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Interface
+        ...
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
@@ -54,21 +54,14 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
           aria-controls="collapseTwo">
           <i class="fas fa-paw"></i>
-          <span>Data Kucing</span>
+          <span>Data Hewan</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Data Kucing Kami :</h6>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-                  aria-controls="collapseTwo">
-                  <i class="fas fa-paw"></i>
-                  <span>Data Anjing</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                  <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Data Anjing Kami :</h6>
-            {{-- <a class="collapse-item" href="{{ route('admin.index')}}">Data Kucing</a> --}}
+            <h6 class="collapse-header">List Data :</h6>
+            <a class="collapse-item" href="{{ route('admin.index')}}">Data Hewan</a>
+            <a class="collapse-item" href="{{ route('admin.index')}}">Data Kucing</a>
+            <a class="collapse-item" href="{{ route('admin.index')}}">Data Anjing</a>
           </div>
         </div>
       </li>

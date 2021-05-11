@@ -25,9 +25,9 @@
                         @auth
                         <!-- Desktop Button -->
                         <div class="d-flex">
-                            <form class="form-inline" action="" method="GET">
+                            <form class="form-inline" action="{{route('admin.index')}}" method="GET">
                                 @csrf
-                                <button style="margin-top: -7px; color: white" class="btn btn-login btn-navbar-right " type="submit">
+                                <button style="margin-top: -7px; color: white" class="btn btn-login btn-navbar-right" type="submit">
                                     Admin
                                 </button>
                             </form>
