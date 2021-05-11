@@ -5,7 +5,7 @@
     <div class="bg">
         <figure class="snip0057 red hover">
           <figcaption>
-            <h2>Detail <span>kucing</span></h2>
+            <h2>Detail <span>Hewan</span></h2>
             <p>{{ $item->jenis_hewan }}</p>
             <p>{{ $item->deskripsi }}</p>
             <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
@@ -13,7 +13,7 @@
           {{-- <div class="image"><img src="{{ $item->galleries()->where('kucing_id', '=' , $item->id)->first()->photo }}" alt="sample4"/></div> --}}
           <div class="position">
           <a href="#" class="btn btn-primary adopt">Adopt me</a>
-          <a href="/" class="btn btn-primary adopt"> | kembali</a>
+          <a href="/" class="btn btn-primary adopt"> kembali</a>
           </div>
         </figure>
         </div>
@@ -25,7 +25,7 @@
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-9">
                 <div class="title text-center">
-                    <h1 class="mb-20">Detail Kucing</h1>
+                    <h1 class="mb-20">Detail Hewan</h1>
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center">
                     <div class="image" style="border-radius: 15px"><img src="{{asset('storage/'.$item->foto)}}" alt="sample4"/></div>
@@ -36,7 +36,7 @@
             <form class="col-lg-9" {{--action="{{ route('homeKucing', $item->id)}}"--}} method="POST">
                 @csrf
                 <div class="form-group">
-                    <label for="first-name">Jenis Kucing</label>
+                    <label for="first-name">Jenis Hewan</label>
                     <input
                     disabled
                         type="text"
@@ -66,7 +66,7 @@
 
                 {{-- adopted --}}
                 <div class="form-group">
-                <label for="adopted" class="form-control-label">Adopsi ? </label>
+                <label for="adopted" class="form-control-label">Apakah anda bersedia untuk mengadopsi ? </label>
                 <br />
 
                 <label>

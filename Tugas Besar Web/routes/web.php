@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
+<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('pages.user.home');
@@ -24,7 +25,14 @@ Route::get('/', function () {
 //     return view('welcome');
 // });
 
+<<<<<<< Updated upstream
 Route::get('/',[UserController::class,'index'])->name('user.index');
+=======
+
+=======
+Route::get('/',[UserController::class,'index'])->name('user.index');
+>>>>>>> master
+>>>>>>> Stashed changes
 Auth::routes();
 Route::middleware(['auth'])->group(function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
