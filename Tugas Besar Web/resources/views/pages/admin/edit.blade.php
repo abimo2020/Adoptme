@@ -12,19 +12,50 @@
       <h6 class="m-0 font-weight-bold text-warning">Edit Data Kucing</h6>
     </div>
     <div class="card-body">
-      <form action="{{ route('admin.update', $item->id)}}" method="POST">
+      <form action="{{ route('admin.update', $item->id)}}" method="POST" enctype="multipart/form-data">
         @method('PATCH')
         @csrf
         {{-- jenis_kucing --}}
         <div class="form-group">
-          <label for="jenis_kucing">Jenis Hewan</label>
-          <input type="text" name="jenis_kucing" value="{{ old('jenis_kucing') ? old('jenis_kucing') : $item->jenis_kucing}}"
-              class="form-control @error('jenis_kucing') is-invalid  @enderror" id=" jenis_kucing"
+          <label for="kode_hewan">Kode Hewan</label>
+          <input type="text" name="kode_hewan" value="{{ old('kode_hewan') ? old('kode_hewan') : $item->kode_hewan}}"
+              class="form-control @error('kode_hewan') is-invalid  @enderror" id=" kode_hewan"
               placeholder="Masukkan Jenis Kucing" required>
-          @error('jenis_kucing') <div class="text-muted">{{ $message }}</div> @enderror
+          @error('kode_hewan') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
+        <div class="form-group">
+            <label for="jenis_hewan" class="form-control-label">Jenis Kelamin</label>
 
-        {{-- jenis_kelamin--}}
+            <br />
+
+            <label>
+                <input {{ $item->jenis_hewan == "Kucing" ? "checked" : "" }} type="radio" name="jenis_hewan" value="Kucing"
+                    class="form-control @error('jenis_hewan') is-invalid @enderror" /> Kucing
+            </label>
+
+            &nbsp;
+
+            <label>
+                <input {{ $item->jenis_hewan == "Anjing" ? "checked" : "" }} type="radio" name="jenis_hewan" value="Anjing"
+                    class="form-control @error('jenis_hewan') is-invalid @enderror" /> Anjing
+            </label>
+            @error('jenis_hewan') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
+        {{-- jenis_hewan--}}
+        <div class="form-group">
+            <label for="ras">Kode Hewan</label>
+            <input type="text" name="ras" value="{{ old('ras') ? old('ras') : $item->ras}}"
+                class="form-control @error('ras') is-invalid  @enderror" id=" ras"
+                placeholder="Masukkan Jenis Kucing" required>
+            @error('ras') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
+          <div class="form-group">
+            <label for="usia">Kode Hewan</label>
+            <input type="text" name="usia" value="{{ old('usia') ? old('usia') : $item->usia}}"
+                class="form-control @error('usia') is-invalid  @enderror" id=" usia"
+                placeholder="Masukkan Jenis Kucing" required>
+            @error('usia') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
         <div class="form-group">
           <label for="jenis_kelamin" class="form-control-label">Jenis Kelamin</label>
 
@@ -43,6 +74,13 @@
           </label>
           @error('jenis_kelamin') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
+        <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <input type="text" name="alamat" value="{{ old('alamat') ? old('alamat') : $item->alamat}}"
+                class="form-control @error('alamat') is-invalid  @enderror" id=" alamat"
+                placeholder="Masukkan Jenis Kucing" required>
+            @error('alamat') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
 
         {{-- deskripsi --}}
         <div class="form-group">
@@ -54,43 +92,24 @@
         </div>
 
         {{-- adopted --}}
+
         <div class="form-group">
-          <label for="is_adopted" class="form-control-label">Adopsi</label>
+          <label for="adopted" class="form-control-label">Adopsi</label>
 
           <br />
 
           <label>
-              <input {{ $item->is_adopted == "1" ? "checked" : "" }} type="radio" name="is_adopted" value="1"
-                  class="form-control @error('is_adopted') is-invalid @enderror" /> Sudah Adopsi
+              <input {{ $item->adopted == "1" ? "checked" : "" }} type="radio" name="adopted" value="1"
+                  class="form-control @error('adopted') is-invalid @enderror" /> Sudah
           </label>
 
           &nbsp;
 
           <label>
-              <input {{ $item->is_adopted == "0" ? "checked" : "" }} type="radio" name="is_adopted" value="0"
-                  class="form-control @error('is_adopted') is-invalid @enderror" /> Belum Adopsi
+              <input {{ $item->adopted == "0" ? "checked" : "" }} type="radio" name="adopted" value="0"
+                  class="form-control @error('adopted') is-invalid @enderror" /> Belum
           </label>
-          @error('is_adopted') <div class="text-muted">{{ $message }}</div> @enderror
-        </div>
-
-        {{-- approve --}}
-        <div class="form-group">
-          <label for="is_approved" class="form-control-label">Approval</label>
-
-          <br />
-
-          <label>
-              <input {{ $item->is_approved == "1" ? "checked" : "" }} type="radio" name="is_approved" value="1"
-                  class="form-control @error('is_approved') is-invalid @enderror" /> Setujui
-          </label>
-
-          &nbsp;
-
-          <label>
-              <input {{ $item->is_approved == "0" ? "checked" : "" }} type="radio" name="is_approved" value="0"
-                  class="form-control @error('is_approved') is-invalid @enderror" /> Tidak Setujui
-          </label>
-          @error('is_approved') <div class="text-muted">{{ $message }}</div> @enderror
+          @error('adopted') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
         <div class="form-group">
           <button type="submit" class="mt-5 btn btn-primary btn-block">Submit</button>

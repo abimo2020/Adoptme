@@ -3,6 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+Use App\Models\Pet;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class CreatePetsTable extends Migration
 {
@@ -15,7 +18,7 @@ class CreatePetsTable extends Migration
     {
         Schema::create('pets', function (Blueprint $table) {
             $table->id();
-            $table->char('kode_hewan',4)->unique()->nullable();
+            $table->char('kode_hewan',4)->unique();
             $table->string('jenis_hewan');
             $table->integer('usia');
             $table->string('jenis_kelamin');

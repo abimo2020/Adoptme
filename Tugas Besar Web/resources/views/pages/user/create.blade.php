@@ -23,15 +23,15 @@
                     <label>
                         <input type="radio" name="jenis_hewan" value="Anjing" class="form-control @error('jenis_hewan') is-invalid @enderror" /> Anjing
                     </label>
-                    @error('jenis_hewan') <div class="text-muted">{{ $message }}</div> @enderror
+                    @error('jenis_hewan') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="ras">Ras</label>
-                    <input type="text" id="ras"name="ras" value="{{ old('ras') }}" class="form-control" placeholder="Ras Hewan">@error('ras') <div class="text-muted">{{ $message }}</div> @enderror
+                    <input type="text" id="ras"name="ras" value="{{ old('ras') }}" class="form-control" placeholder="Ras Hewan">@error('ras') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="usia">Usia</label>
-                    <input type="text" id="usia"name="usia" value="{{ old('usia') }}" class="form-control" placeholder="Usia">@error('usia') <div class="text-muted">{{ $message }}</div> @enderror
+                    <input type="text" id="usia"name="usia" value="{{ old('usia') }}" class="form-control" placeholder="Usia">@error('usia') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="jenis_kelamin" class="form-control-label">Jenis Kelamin</label><br/>
@@ -41,23 +41,28 @@
                     <label>
                         <input type="radio" name="jenis_kelamin" value="Betina" class="form-control @error('jenis_kelamin') is-invalid @enderror" /> Betina
                     </label>
-                    @error('jenis_kelamin') <div class="text-muted">{{ $message }}</div> @enderror
+                    @error('jenis_kelamin') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="alamat">Alamat</label>
                     <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror" id="alamat" rows="5"placeholder="Tuliskan alamat">
+                    {{old('alamat')}}
                     </textarea>
                 </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
+                    <textarea name="deskripsi"  class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
+                    {{old('deskripsi')}}
                     </textarea>
                 </div>
                 <div class="form-group">
                     <div class="row">
-                     <label class="col-md-4">Pilih Foto</label>
+                     <label class="col-md-4" for="foto">Pilih Foto</label>
                      <div class="col-md-8">
-                      <input type="file" name="foto" />
+                      <input type="file" name="foto" id="foto"/>
+                      @error('foto')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                      </div>
                     </div>
                    </div>

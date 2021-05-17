@@ -60,8 +60,8 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">List Data :</h6>
             <a class="collapse-item" href="{{ route('admin.index')}}">Data Hewan</a>
-            <a class="collapse-item" href="{{ route('admin.index')}}">Data Kucing</a>
-            <a class="collapse-item" href="{{ route('admin.index')}}">Data Anjing</a>
+            <a class="collapse-item" href="{{ route('admin.kucing')}}">Data Kucing</a>
+            <a class="collapse-item" href="{{ route('admin.anjing')}}">Data Anjing</a>
           </div>
         </div>
       </li>

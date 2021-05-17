@@ -24,7 +24,6 @@ class CreateHewan extends FormRequest
     public function rules()
     {
         return [
-            'kode_hewan' => 'size:4',
             'jenis_hewan' => 'required',
             'usia' => 'required|integer',
             'jenis_kelamin' =>'required',

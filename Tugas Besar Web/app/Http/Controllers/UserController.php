@@ -6,6 +6,7 @@ use App\Http\Requests\CreateHewan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+Use Illuminate\Support\Str;
 class UserController extends Controller
 
 {
@@ -22,6 +23,7 @@ class UserController extends Controller
     public function storeCreate(CreateHewan $request){
         $validatedData = $request->validated();
         $pet = new Pet();
+        $pet->kode_hewan = Str::random(4);
         $pet->jenis_hewan = $validatedData['jenis_hewan'];
         $pet->usia = $validatedData['usia'];
         $pet->jenis_kelamin = $validatedData['jenis_kelamin'];
@@ -30,6 +32,13 @@ class UserController extends Controller
         $pet->deskripsi = $validatedData['deskripsi'];
         $pet->foto = $validatedData['foto']->store('foto','public');
         $pet->save();
+        return redirect()->route('user.index');
+    }
+    public function adopted(Request $request, Pet $pet){
+        $validateData = $request->validate([
+            'adopted' => 'required'
+        ]);
+        $pet->update($validateData);
         return redirect()->route('user.index');
     }
     public function tes(CreateHewan $item){
