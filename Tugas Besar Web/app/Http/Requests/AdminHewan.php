@@ -24,11 +24,11 @@ class AdminHewan extends FormRequest
     public function rules()
     {
         return [
-                'kode_hewan' => 'size:4|unique:pets,kode_hewan',
                 'jenis_hewan' => 'required',
                 'usia' => 'required|integer',
                 'jenis_kelamin' =>'required',
                 'ras' => 'required',
+                'no_hp' => 'required',
                 'alamat' => 'required',
                 'deskripsi' => 'required',
                 'foto' => 'required|file|mimes:png,jpg,jpeg|image|max:2000'

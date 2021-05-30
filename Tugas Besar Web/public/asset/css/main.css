@@ -2343,7 +2343,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area {
-  background: url(../img/banner-bg.jpg) center;
+  background: url(../img/adopt.jpg) center;
   height: 100vh;
   background-size: cover;
 
@@ -2768,7 +2768,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .calltoaction-area {
-  background: url(../img/call-bg.jpg) center;
+  background: url(../img/adopt2.jpg) center;
   background-size: cover;
   text-align: center;
 }

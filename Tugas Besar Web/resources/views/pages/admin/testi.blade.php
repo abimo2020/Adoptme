@@ -22,57 +22,38 @@
             <thead>
               <tr>
                 <th>No.</th>
-                <th>Kode Hewan</th>
-                <th>Jenis Hewan</th>
-                <th>Jenis Kelamin</th>
-                <th>Ras</th>
-                <th>Usia</th>
-                <th>Deskripsi</th>
-                <th>Status</th>
-                <th>Persetujuan</th>
-                <th>No. Handphone</th>
-                <th>Alamat</th>
-                <th>Foto</th>
-                <th>Nama Adopter</th>
-                <th>Alamat Adopter</th>
-                <th>No. Handphone Adopter</th>
-              </tr>
+                <th>Nama</th>
+                <th>Sebagai</th>
+                <th>Testimoni</th>
+                <th>Diterima</th>
             </thead>
-
             <tbody>
               @foreach ($item as $item)
                 <tr>
                   <td>{{$loop->iteration}}</td>
-                  <td>{{ $item->kode_hewan}}</td>
-                  <td>{{ $item->jenis_hewan }}</td>
-                  <td>{{ $item->jenis_kelamin }}</td>
-                  <td>{{ $item->ras}}</td>
-                  <td>{{ $item->usia}}</td>
-                  <td>{{ $item->deskripsi }}</td>
-                  <td>{{ $item->adopted ? 'Sudah' : 'Belum' }}</td>
+                  <td>{{ $item->nama}}</td>
+                  <td>{{ $item->sebagai }}</td>
+                  <td>{{ $item->testimoni }}</td>
                   <td>{{ $item->allowed ? 'Sudah' : 'Belum' }}</td>
-                  <td>{{ $item->no_hp}}</td>
-                  <td>{{ $item->alamat}}</td>
                   <td>
-                    <img src="{{asset('storage/'.$item->foto)}}" alt="" width="100%">
-                  </td>
-                  <td>{{$item->nama_adopter}}</td>
-                  <td>{{$item->alamat_adopter}}</td>
-                  <td>{{$item->no_hp_adopter}}</td>
-                  <td>
+
                     <div class="row justify-content-center">
-                      <a href="{{ route('admin.edit',$item->id)}}" class="btn btn-primary btn-sm"><i class="fas fa-pencil-alt"
+                      <a href="{{ route('editTesti',$item->id)}}" class="btn btn-primary btn-sm"><i class="fas fa-pencil-alt"
                           aria-hidden="true"></i>
                       </a>
-                      <div class="row justify-content-center">
-                        <form action="{{route('admin.allow',['pet'=>$item->id])}}" method="post">
+                      </div>
+
+                    <div class="row justify-content-center">
+                        <form action="{{route('updateTesti',['testi'=>$item->id])}}" method="post">
                             @method('PATCH')
                             @csrf
                         <button class="btn btn-success btn-sm">
                             <i class="fas fa-check"></i>
                         </button>
                     </form>
-                      <form action="{{route('admin.destroy',['item'=>$item->id])}}" method="POST"
+                      </div>
+                      <div class="row justify-content-center">
+                      <form action="{{route('deleteTesti',['testi'=>$item->id])}}" method="POST"
                         class="d-inline">
                         @csrf
                         @method('DELETE')

@@ -81,7 +81,11 @@
                         class="form-control"
                         placeholder="Jenis Kucing">
                 </div>
+                <input type="hidden" name="nama_adopter" value="{{$user->name}}">
+                <input type="hidden" name="alamat_adopter" value="{{$user->alamat}}">
+                <input type="hidden" name="no_hp_adopter" value="{{$user->no_hp}}">
                 <div class="form-group">
+                @if ($item->adopted == '0')
                 <label for="adopted" class="form-control-label">Apakah anda bersedia untuk mengadopsi ?</label><br>
                 <label>
                     <input {{ $item->adopted == "1" ? "checked" : "" }} type="radio" name="adopted" value="1"
@@ -93,13 +97,10 @@
                 </label> --}}
                     {{-- @error('is_adopted') <div class="text-muted">{{ $message }}</div> @enderror --}}
                 </div>
-
-
-
                 <div style="display: flex; justify-content: flex-end">
                     <button style="padding: 5px 15px" type="submit" class="btn btn-info">Adopsi</button>
                     <a href="/" class="btn adopt">kembali</a>
-                </div>
+                </div>@endif
             </form>
         </div>
     </div>

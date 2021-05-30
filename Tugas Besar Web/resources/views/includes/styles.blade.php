@@ -15,8 +15,9 @@
 <link rel="stylesheet" href="{{ asset('asset/css/font-awesome.min.css')}}">
 <link rel="stylesheet" href="{{ asset('asset/css/bootstrap.css')}}">
 <link rel="stylesheet" href="{{ asset('asset/css/magnific-popup.css')}}">
-<link rel="stylesheet" href="{{ asset('asset/css/nice-select.css')}}">							
+<link rel="stylesheet" href="{{ asset('asset/css/nice-select.css')}}">
 <link rel="stylesheet" href="{{ asset('asset/css/animate.min.css')}}">
 <link rel="stylesheet" href="{{ asset('asset/css/owl.carousel.css')}}">
 <link rel="stylesheet" href="{{ asset('asset/css/main.css')}}">
 <link rel="stylesheet" href="{{ asset('asset/css/styleReadData.css')}}">
+

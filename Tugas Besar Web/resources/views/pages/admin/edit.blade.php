@@ -16,15 +16,9 @@
         @method('PATCH')
         @csrf
         {{-- jenis_kucing --}}
+
         <div class="form-group">
-          <label for="kode_hewan">Kode Hewan</label>
-          <input type="text" name="kode_hewan" value="{{ old('kode_hewan') ? old('kode_hewan') : $item->kode_hewan}}"
-              class="form-control @error('kode_hewan') is-invalid  @enderror" id=" kode_hewan"
-              placeholder="Masukkan Jenis Kucing" required>
-          @error('kode_hewan') <div class="text-muted">{{ $message }}</div> @enderror
-        </div>
-        <div class="form-group">
-            <label for="jenis_hewan" class="form-control-label">Jenis Kelamin</label>
+            <label for="jenis_hewan" class="form-control-label">Jenis Hewan</label>
 
             <br />
 
@@ -43,17 +37,17 @@
           </div>
         {{-- jenis_hewan--}}
         <div class="form-group">
-            <label for="ras">Kode Hewan</label>
+            <label for="ras">Ras</label>
             <input type="text" name="ras" value="{{ old('ras') ? old('ras') : $item->ras}}"
                 class="form-control @error('ras') is-invalid  @enderror" id=" ras"
-                placeholder="Masukkan Jenis Kucing" required>
+                placeholder="Ras hewan" required>
             @error('ras') <div class="text-muted">{{ $message }}</div> @enderror
           </div>
           <div class="form-group">
-            <label for="usia">Kode Hewan</label>
+            <label for="usia">Usia</label>
             <input type="text" name="usia" value="{{ old('usia') ? old('usia') : $item->usia}}"
                 class="form-control @error('usia') is-invalid  @enderror" id=" usia"
-                placeholder="Masukkan Jenis Kucing" required>
+                placeholder="Usia hewan" required>
             @error('usia') <div class="text-muted">{{ $message }}</div> @enderror
           </div>
         <div class="form-group">
@@ -75,10 +69,17 @@
           @error('jenis_kelamin') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
         <div class="form-group">
+            <label for="no_hp">No. Handphone</label>
+            <input type="text" name="no_hp" value="{{ old('no_hp') ? old('no_hp') : $item->no_hp}}"
+                class="form-control @error('no_hp') is-invalid  @enderror" id=" no_hp"
+                placeholder="No. Handphone pemilik hewan" required>
+            @error('no_hp') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
+        <div class="form-group">
             <label for="alamat">Alamat</label>
             <input type="text" name="alamat" value="{{ old('alamat') ? old('alamat') : $item->alamat}}"
                 class="form-control @error('alamat') is-invalid  @enderror" id=" alamat"
-                placeholder="Masukkan Jenis Kucing" required>
+                placeholder="Alamat pemilik hewan" required>
             @error('alamat') <div class="text-muted">{{ $message }}</div> @enderror
           </div>
 
@@ -111,6 +112,45 @@
           </label>
           @error('adopted') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
+        <div class="form-group">
+            <label for="allowed" class="form-control-label">Disetujui</label>
+
+            <br />
+
+            <label>
+                <input {{ $item->allowed == "1" ? "checked" : "" }} type="radio" name="allowed" value="1"
+                    class="form-control @error('allowed') is-invalid @enderror" /> Sudah
+            </label>
+
+            &nbsp;
+
+            <label>
+                <input {{ $item->allowed == "0" ? "checked" : "" }} type="radio" name="allowed" value="0"
+                    class="form-control @error('allowed') is-invalid @enderror" /> Belum
+            </label>
+            @error('allowed') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
+          <div class="form-group">
+            <label for="nama_adopter">nama Adopter</label>
+            <input type="text" name="nama_adopter" value="{{ old('nama_adopter') ? old('nama_adopter') : $item->nama_adopter}}"
+                class="form-control @error('nama_adopter') is-invalid  @enderror" id=" nama_adopter"
+                placeholder="Masukkan nama Adopter">
+            @error('nama_adopter') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
+          <div class="form-group">
+            <label for="no_hp_adopter">No. Handphone Adopter</label>
+            <input type="text" name="no_hp_adopter" value="{{ old('no_hp_adopter') ? old('no_hp_adopter') : $item->no_hp_adopter}}"
+                class="form-control @error('no_hp_adopter') is-invalid  @enderror" id=" no_hp_adopter"
+                placeholder="No. Handphone adopter">
+            @error('no_hp_adopter') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
+        <div class="form-group">
+            <label for="alamat_adopter">Alamat Adopter</label>
+            <input type="text" name="alamat_adopter" value="{{ old('alamat_adopter') ? old('alamat_adopter') : $item->alamat_adopter}}"
+                class="form-control @error('alamat_adopter') is-invalid  @enderror" id=" alamat_adopter"
+                placeholder="Masukkan Alamat Adopter">
+            @error('alamat_adopter') <div class="text-muted">{{ $message }}</div> @enderror
+          </div>
         <div class="form-group">
           <button type="submit" class="mt-5 btn btn-primary btn-block">Submit</button>
         </div>

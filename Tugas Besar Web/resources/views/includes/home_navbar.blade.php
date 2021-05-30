@@ -6,11 +6,14 @@
             </nav>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="/">Beranda</a></li>
-                    <li><a href="#fillDonatesCats">Adopsi </a></li>
-                    <li><a href="#cardCats">Donasi </a></li>
-                    <li><a href="#contactUs">Hubungi Kami</a></li>
-                    <li><a href="#testimonail">Tentang Kami</a></li>
+                    @auth
+                    <li><a href="#daftarHewan">Adopsi </a></li>
+
+                    <li><a href="{{route('user.create')}}">Donasi </a></li>
+                    @endauth
+                    {{-- <li><a href="#footer">Hubungi Kami</a></li> --}}
+                    <li><a href="#footer">Tentang Kami</a></li>
+
                     <li>
                         @guest
                         <!-- Desktop Button -->
@@ -24,6 +27,7 @@
 
                         @auth
                         <!-- Desktop Button -->
+                        @if(Auth::user()->role == 'admin')
                         <div class="d-flex">
                             <form class="form-inline" action="{{route('admin.index')}}" method="GET">
                                 @csrf
@@ -31,9 +35,10 @@
                                     Admin
                                 </button>
                             </form>
+                        @endif
                             <button style="margin-top: -7px; color: white" class="btn" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                                log out
+                                logout({{Auth::user()->name}})
                             </button>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf

@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Adoptme - Dashboard</title>
   @stack('admin-before-style')
   @include('includes.styles')
@@ -65,6 +64,14 @@
           </div>
         </div>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('admin.testi')}}"
+          aria-controls="collapseTwo">
+          <i class="fas fa-paw"></i>
+          <span>Testimoni</span>
+        </a>
+      </li>
+
 
 
 

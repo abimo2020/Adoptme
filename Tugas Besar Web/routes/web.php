@@ -15,34 +15,37 @@ use App\Http\Controllers\UserController;
 |
 */
 
-
-// Route::get('/', function () {
-//     return view('pages.user.home');
-// });
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 Route::get('/',[UserController::class,'index'])->name('user.index');
 Auth::routes();
 Route::middleware(['auth'])->group(function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/donasi-hewan',[UserController::class,'create'])->name('user.create');
-    Route::post('/',[UserController::class,'storeCreate'])->name('user.storeCreate');
-    Route::get('/adopsi-kucing',[UserController::class,'adopt'])->name('user.adopt');
-    Route::get('/tes',[UserController::class,'tes']);
-    Route::get('/detail/{item}',[UserController::class,'show'])->name('user.show');
-    Route::patch('/adopt-{pet}',[UserController::class,'adopted'])->name('user.adopted');
+    Route::get('/donasi',[UserController::class,'create'])->name('user.create');
+    // Route::post('/',[UserController::class,'storeCreate'])->name('user.storeCr');
+    // Route::get('/adopsi/hewan',[UserController::class,'adopt'])->name('user.adopt');
+    Route::get('/adopsi/{item}',[UserController::class,'show'])->name('user.show');
+    Route::patch('/adopsi/{pet}',[UserController::class,'adopted'])->name('user.adopted');
+    Route::get('/testimonial',[UserController::class,'testi'])->name('user.testi');
+    Route::post('/testimoni/create',[UserController::class,'storeTesti'])->name('user.storeTesti');
+    Route::post('/donasi/create',[UserController::class,'storeCreate'])->name('user.storeCreate');
     Route::middleware(['admin'])->group(function(){
         Route::get('/admin',[AdminController::class,'index'])->name('admin.index');
-        Route::get('/admin-dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
-        Route::get('/admin-tambah-data',[AdminController::class,'create'])->name('admin.create');
+        Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+        Route::get('/admin/tambah-data',[AdminController::class,'create'])->name('admin.create');
         Route::post('/admin',[AdminController::class,'store'])->name('admin.store');
-        Route::get('/admin-edit-{item}',[AdminController::class,'edit'])->name('admin.edit');
-        Route::patch('/admin-update-{pet}',[AdminController::class,'update'])->name('admin.update');
-        Route::delete('/admin-delete-{item}',[AdminController::class,'destroy'])->name('admin.destroy');
-        Route::get('/admin-list-kucing',[AdminController::class,'listKucing'])->name('admin.kucing');
-        Route::get('/admin-list-anjing',[AdminController::class,'listAnjing'])->name('admin.anjing');
+        Route::get('/admin/edit/{item}',[AdminController::class,'edit'])->name('admin.edit');
+        Route::patch('/admin/update/{pet}',[AdminController::class,'update'])->name('admin.update');
+        Route::delete('/admin/delete/{item}',[AdminController::class,'destroy'])->name('admin.destroy');
+        Route::get('/admin/list/kucing',[AdminController::class,'listKucing'])->name('admin.kucing');
+        Route::get('/admin/list/anjing',[AdminController::class,'listAnjing'])->name('admin.anjing');
+        Route::get('/admin/testimoni',[AdminController::class,'testi'])->name('admin.testi');
+        // Route::get('/admin-edit-testimoni-{testi}',[AdminController::class,'editTesti'])->name('admin.editTesti');
+        // Route::patch('/admin-update-testimoni-{testi}',[AdminController::class,'updateTesti'])->name('admin.updateTesti');
+        // Route::delete('/admin-delete-testimoni-{testi}',[AdminController::class,'destroyTesti'])->name('admin.destroyTesti');
+        Route::patch('/admin/allow/{pet}',[AdminController::class,'allow'])->name('admin.allow');
+        Route::get('/admin/testimoni/edit/{testi}',[AdminController::class,'tst'])->name('editTesti');
+        Route::patch('/admin/testimoni/update/all{testi}',[AdminController::class,'updateTesti'])->name('upTest');
+        Route::patch('/admin/testimoni/update/{testi}',[AdminController::class,'tstUp'])->name('updateTesti');
+        Route::delete('/admin/testimoni/delete/{testi}',[AdminController::class,'tstDel'])->name('deleteTesti');
     });
     Route::get('logout',function(){
         Auth::logout();

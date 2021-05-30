@@ -18,10 +18,10 @@
                 <div class="form-group">
                     <label for="jenis_hewan" class="form-control-label">Jenis Hewan</label><br/>
                     <label>
-                        <input type="radio" name="jenis_hewan" value="Kucing" class="form-control @error('jenis_hewan') is-invalid @enderror"/> Kucing
+                        <input type="radio" name="jenis_hewan" value="Kucing" class="form-control @error('jenis_hewan') is-invalid @enderror"{{ old('jenis_hewan')=='Kucing' ? 'checked': '' }}/> Kucing
                     </label>&nbsp;
                     <label>
-                        <input type="radio" name="jenis_hewan" value="Anjing" class="form-control @error('jenis_hewan') is-invalid @enderror" /> Anjing
+                        <input type="radio" name="jenis_hewan" value="Anjing" class="form-control @error('jenis_hewan') is-invalid @enderror" {{ old('jenis_hewan')=='Anjing' ? 'checked': '' }}/> Anjing
                     </label>
                     @error('jenis_hewan') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
@@ -36,24 +36,19 @@
                 <div class="form-group">
                     <label for="jenis_kelamin" class="form-control-label">Jenis Kelamin</label><br/>
                     <label>
-                        <input type="radio" name="jenis_kelamin" value="Jantan" class="form-control @error('jenis_kelamin') is-invalid @enderror"/> Jantan
+                        <input type="radio" name="jenis_kelamin" value="Jantan" class="form-control @error('jenis_kelamin') is-invalid @enderror" {{ old('jenis_kelamin')=='Jantan' ? 'checked': '' }}/> Jantan
                     </label>&nbsp;
                     <label>
-                        <input type="radio" name="jenis_kelamin" value="Betina" class="form-control @error('jenis_kelamin') is-invalid @enderror" /> Betina
+                        <input type="radio" name="jenis_kelamin" value="Betina" class="form-control @error('jenis_kelamin') is-invalid @enderror" {{ old('jenis_kelamin')=='Betina' ? 'checked': '' }}/> Betina
                     </label>
                     @error('jenis_kelamin') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
-                    <label for="alamat">Alamat</label>
-                    <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror" id="alamat" rows="5"placeholder="Tuliskan alamat">
-                    {{old('alamat')}}
-                    </textarea>
-                </div>
-                <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi"  class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
+                    <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
                     {{old('deskripsi')}}
-                    </textarea>
+
+                    </textarea>@error('deskripsi') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <div class="row">

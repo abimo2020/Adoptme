@@ -18,6 +18,8 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'password' => Hash::make('admin'),
             'email' => 'admin@gmail.com',
+            'alamat' => 'admin',
+            'no_hp' => '0895360053889',
             'role' => 'admin',
             'email_verified_at' => \Carbon\Carbon::now(),
             'created_at' => \Carbon\Carbon::now()

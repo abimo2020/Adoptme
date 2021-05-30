@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateHewan extends FormRequest
+class CreateTestimoni extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,8 @@ class CreateHewan extends FormRequest
     public function rules()
     {
         return [
-            'jenis_hewan' => 'required',
-            'usia' => 'required|integer',
-            'jenis_kelamin' =>'required',
-            'ras' => 'required',
-            'deskripsi' => 'required',
-            'foto' => 'required|file|mimes:png,jpg,jpeg|image|max:2000'
+            'sebagai' => 'required',
+            'testimoni' => 'required',
         ];
     }
 }

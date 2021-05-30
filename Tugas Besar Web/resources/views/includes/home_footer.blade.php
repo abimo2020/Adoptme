@@ -1,5 +1,5 @@
 <!-- start footer Area -->
-<footer class="footer-area">
+<footer class="footer-area" id="footer">
     <div class="container">
         <div class="row pt-120 pb-80">
             <div class="col-lg-4 col-md-6">
@@ -13,12 +13,12 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="single-footer-widget">
-                    <h6>links</h6>
+                    {{-- <h6>links</h6> --}}
                     <div class="row">
                         <ul class="col footer-nav">
-                            <li><a href="#">Beranda</a></li>
+                            {{-- <li><a href="#">Beranda</a></li>
                             <li><a href="#">Layanan</a></li>
-                            <li><a href="#">Tentang Kami</a></li>
+                            <li><a href="#">Tentang Kami</a></li> --}}
                         </ul>
                     </div>
                 </div>
