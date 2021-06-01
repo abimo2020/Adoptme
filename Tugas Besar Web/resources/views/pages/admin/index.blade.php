@@ -49,7 +49,10 @@
                   <td>{{ $item->ras}}</td>
                   <td>{{ $item->usia}}</td>
                   <td>{{ $item->deskripsi }}</td>
-                  <td>{{ $item->adopted ? 'Sudah' : 'Belum' }}</td>
+                  <td>@if ($item->adopted=='2') Teradopsi
+                    @elseif($item->adopted=='1') Proses
+                    @elseif ($item->adopted=='0') Belum diadopsi
+                    @endif</td>
                   <td>{{ $item->allowed ? 'Sudah' : 'Belum' }}</td>
                   <td>{{ $item->no_hp}}</td>
                   <td>{{ $item->alamat}}</td>
@@ -72,6 +75,13 @@
                             <i class="fas fa-check"></i>
                         </button>
                     </form>
+                    <form action="{{route('admin.adopted',['pet'=>$item->id])}}" method="post">
+                        @method('PATCH')
+                        @csrf
+                    <button class="btn btn-info btn-sm">
+                        <i class="fas fa-check-double"></i>
+                    </button>
+                </form>
                       <form action="{{route('admin.destroy',['item'=>$item->id])}}" method="POST"
                         class="d-inline">
                         @csrf

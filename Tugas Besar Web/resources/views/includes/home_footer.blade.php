@@ -45,7 +45,7 @@
                             <div class="detail">
                                 <h4>081221565331</h4>
                                 <p>
-                                    Monday to Friday 9 AM to 6 PM
+                                    Senin - Jum'at 09.00 - 15.00
                                 </p>
                             </div>
                         </li>

@@ -15,7 +15,17 @@ class UserController extends Controller
 
 {
     public function index(){
-        $items = Pet::paginate(12);
+        $items = Pet::paginate(8);
+        $testi = Testimoni::orderByRaw('RAND()')->limit(9)->get();
+        return view('pages.user.home')->with(['items' => $items])->with(['testi'=>$testi]);
+    }
+    public function listAnjing(){
+        $items = Pet::where('jenis_hewan',"=",'Anjing')->paginate(8);
+        $testi = Testimoni::orderByRaw('RAND()')->limit(9)->get();
+        return view('pages.user.home')->with(['items' => $items])->with(['testi'=>$testi]);
+    }
+    public function listKucing(){
+        $items = Pet::where('jenis_hewan',"=",'Kucing')->paginate(8);
         $testi = Testimoni::orderByRaw('RAND()')->limit(9)->get();
         return view('pages.user.home')->with(['items' => $items])->with(['testi'=>$testi]);
     }

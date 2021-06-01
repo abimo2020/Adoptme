@@ -39,11 +39,17 @@
     </div>
 </section>
 <!-- End callto-top Area -->
-
 <!-- Start cat-list Area -->
-
     <section class="cat-list-area section-gap" id="daftarHewan">
     <div class="container">
+        <div class="row justify-content-center">
+            <a href="{{route('user.listAnjing')}}" class="btn btn-info btn-sm"><i class="fas fa-dog"
+                aria-hidden="true"></i>
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="{{route('user.listKucing')}}" class="btn btn-info btn-sm"><i class="fas fa-cat"
+                aria-hidden="true"></i>
+            </a>
+        </div>
         <div class="row">
             @foreach ($items->where('allowed', '1') as $item)
             <div class="col-6 col-sm-6 col-md-4 col-lg-3" style="display: flex; justify-content: center">
@@ -51,13 +57,19 @@
                 <div class="card mt-4" style="width: 17rem;">
                     <img style="max-width: 100% ; max-height: 250px; background-size: cover" src="{{asset('storage/'.$item->foto)}}"   class="card-img-top">
                     <div class="listing__item__pic set-bg">
-                        <div class="listing__item__pic__tag">{{ $item->adopted ? 'Sudah Diadopsi' : 'Tersedia'  }}</div>
+                        @if ($item->adopted=='2')
+                        <div class="listing__item__pic__tag2">Teradopsi</div>
+                        @elseif ($item->adopted=='1')
+                        <div class="listing__item__pic__tag3">Proses</div>
+                        @elseif($item->adopted=='0')
+                        <div class="listing__item__pic__tag">Tersedia</div>
+                        @endif
                     </div>
                     <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between">
                         <div>
                             <h4 class="card-title">{{ $item->ras }}</h4>
                             <hr/>
-                            <h6 class="card-title">{{ $item->jenis_kelamin }}</h6>
+                            <h6 class="card-title">{{$item->usia}} bulan | {{ $item->jenis_kelamin }}</h6>
 
                             <p class="card-text" style="font-size: 13px">{{ $item->deskripsi }}</p>
                         </div>
@@ -70,10 +82,11 @@
             @endforeach
         </div>
     </div>
-    <div class="pagination justify-content-center">
-        {{$items->links()}}
-    </div>
+
 </section>
+<div class="pagination justify-content-center">
+    {{$items->links()}}
+</div>
 @endauth
 <!-- End cat-list Area -->
 <!-- Start About Us Area -->

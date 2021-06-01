@@ -75,21 +75,16 @@
                 placeholder="No. Handphone pemilik hewan" required>
             @error('no_hp') <div class="text-muted">{{ $message }}</div> @enderror
           </div>
-        <div class="form-group">
+          <div class="form-group">
             <label for="alamat">Alamat</label>
-            <input type="text" name="alamat" value="{{ old('alamat') ? old('alamat') : $item->alamat}}"
-                class="form-control @error('alamat') is-invalid  @enderror" id=" alamat"
-                placeholder="Alamat pemilik hewan" required>
-            @error('alamat') <div class="text-muted">{{ $message }}</div> @enderror
+            <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror" id="alamat" rows="5" required>{{ old('alamat') ? old('alamat') : $item->alamat}}</textarea>
           </div>
+
 
         {{-- deskripsi --}}
         <div class="form-group">
           <label for="deskripsi">Deskripsi</label>
-          <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"
-              required>
-            {{ old('deskripsi') ? old('deskripsi') : $item->deskripsi}}
-          </textarea>
+          <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5" required>{{ old('deskripsi') ? old('deskripsi') : $item->deskripsi}}</textarea>
         </div>
 
         {{-- adopted --}}
@@ -98,17 +93,22 @@
           <label for="adopted" class="form-control-label">Adopsi</label>
 
           <br />
+          <label>
+            <input {{ $item->adopted == "2" ? "checked" : "" }} type="radio" name="adopted" value="2"
+                class="form-control @error('adopted') is-invalid @enderror" /> Teradopsi
+        </label>
 
+        &nbsp;
           <label>
               <input {{ $item->adopted == "1" ? "checked" : "" }} type="radio" name="adopted" value="1"
-                  class="form-control @error('adopted') is-invalid @enderror" /> Sudah
+                  class="form-control @error('adopted') is-invalid @enderror" /> Proses
           </label>
 
           &nbsp;
 
           <label>
               <input {{ $item->adopted == "0" ? "checked" : "" }} type="radio" name="adopted" value="0"
-                  class="form-control @error('adopted') is-invalid @enderror" /> Belum
+                  class="form-control @error('adopted') is-invalid @enderror" /> Tersedia
           </label>
           @error('adopted') <div class="text-muted">{{ $message }}</div> @enderror
         </div>

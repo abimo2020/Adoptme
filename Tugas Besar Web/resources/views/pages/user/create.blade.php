@@ -7,8 +7,8 @@
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-9">
                 <div class="title text-center">
-                    <h1 class="mb-20">Want to help? Become a Volunteer</h1>
-                    <p>Terimakasih untuk perduli kepada kucing, lanjutkan isi untuk kemaslahatan kehidupan kucing</p>
+                    <h1 class="mb-20">Ingin membantu? Jadilah seorang relawan</h1>
+                    <p>Terimakasih telah peduli kepada hewan, isi formulir untuk kemaslahatan kehidupan hewan</p>
                 </div>
             </div>
         </div>
@@ -27,11 +27,11 @@
                 </div>
                 <div class="form-group">
                     <label for="ras">Ras</label>
-                    <input type="text" id="ras"name="ras" value="{{ old('ras') }}" class="form-control" placeholder="Ras Hewan">@error('ras') <div class="text-danger">{{ $message }}</div> @enderror
+                    <input type="text" id="ras"name="ras" value="{{ old('ras') }}" class="form-control" placeholder="Kampung, persia, anggora, dll">@error('ras') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="usia">Usia</label>
-                    <input type="text" id="usia"name="usia" value="{{ old('usia') }}" class="form-control" placeholder="Usia">@error('usia') <div class="text-danger">{{ $message }}</div> @enderror
+                    <input type="text" id="usia"name="usia" value="{{ old('usia') }}" class="form-control" placeholder="Isi usia hewan dalam bulan">@error('usia') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="jenis_kelamin" class="form-control-label">Jenis Kelamin</label><br/>
@@ -45,10 +45,7 @@
                 </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
-                    {{old('deskripsi')}}
-
-                    </textarea>@error('deskripsi') <div class="text-danger">{{ $message }}</div> @enderror
+                    <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan anda">{{old('deskripsi')}}</textarea>@error('deskripsi') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <div class="row">

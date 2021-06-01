@@ -7,9 +7,11 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     @auth
-                    <li><a href="#daftarHewan">Adopsi </a></li>
+                    @if(Request::is('/'))
+                    <li><a href="#daftarHewan">Adopsi</a></li>
 
-                    <li><a href="{{route('user.create')}}">Donasi </a></li>
+                    <li><a href="{{route('user.create')}}">Donasi</a></li>
+                    @endif
                     @endauth
                     {{-- <li><a href="#footer">Hubungi Kami</a></li> --}}
                     <li><a href="#footer">Tentang Kami</a></li>

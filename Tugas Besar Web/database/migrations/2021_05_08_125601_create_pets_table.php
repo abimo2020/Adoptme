@@ -26,7 +26,7 @@ class CreatePetsTable extends Migration
             $table->char('no_hp',13);
             $table->text('alamat');
             $table->text('deskripsi');
-            $table->boolean('adopted')->default(false);
+            $table->integer('adopted')->default(0);
             $table->boolean('allowed')->default(false);
             $table->string('foto');
             $table->string('nama_adopter')->nullable();

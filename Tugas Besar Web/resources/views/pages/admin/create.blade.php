@@ -30,11 +30,11 @@
             </div>
             <div class="form-group">
                 <label for="ras">Ras</label>
-                <input type="text" id="ras"name="ras" value="{{ old('ras') }}" class="form-control" placeholder="Isi Ras Hewan">@error('ras') <div class="text-muted">{{ $message }}</div> @enderror
+                <input type="text" id="ras"name="ras" value="{{ old('ras') }}" class="form-control" placeholder="Kampung, persia, anggora, dll">@error('ras') <div class="text-muted">{{ $message }}</div> @enderror
             </div>
             <div class="form-group">
                 <label for="usia">Usia</label>
-                <input type="text" id="usia"name="usia" value="{{ old('usia') }}" class="form-control" placeholder="Isi Usia dalam Bulan">@error('usia') <div class="text-muted">{{ $message }}</div> @enderror
+                <input type="text" id="usia"name="usia" value="{{ old('usia') }}" class="form-control" placeholder="Usia dalam bulan">@error('usia') <div class="text-muted">{{ $message }}</div> @enderror
             </div>
             <div class="form-group">
                 <label for="jenis_kelamin" class="form-control-label">Jenis Kelamin</label><br/>
@@ -48,18 +48,16 @@
             </div>
             <div class="form-group">
                 <label for="no_hp">No. Handphone</label>
-                <input type="text" id="no_hp"name="no_hp" value="{{ old('no_hp') }}" class="form-control" placeholder="No. Handphone pemilik hewan">@error('no_hp') <div class="text-muted">{{ $message }}</div> @enderror
+                <input type="text" id="no_hp"name="no_hp" value="{{ old('no_hp') }}" class="form-control" placeholder="No. Handphone pemilik/penemu hewan">@error('no_hp') <div class="text-muted">{{ $message }}</div> @enderror
             </div>
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror" id="alamat" rows="5"placeholder="Tuliskan alamat">
-                </textarea>
+                <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror" id="alamat" rows="5"placeholder="Kota dan provinsi wajib ditulis"></textarea>
                 @error('alamat') <div class="text-muted">{{ $message }}</div> @enderror
             </div>
             <div class="form-group">
                 <label for="deskripsi">Deskripsi</label>
-                <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan">
-                </textarea>
+                <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="5"placeholder="Tuliskan deskripsi hewan anda"></textarea>
                 @error('deskripsi') <div class="text-muted">{{ $message }}</div> @enderror
             </div>
             <div class="form-group">

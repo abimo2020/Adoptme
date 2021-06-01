@@ -18,7 +18,7 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Kucing Ditemukan</div>
+              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Hewan Ditambahkan</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_hewan}}</div>
             </div>
             <div class="col-auto">
@@ -35,7 +35,7 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Kucing Belum Adopsi</div>
+              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Hewan Belum Adopsi</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $hewan_belum_teradopsi }}</div>
             </div>
             <div class="col-auto">
@@ -50,11 +50,26 @@
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Hewan Diterima</div>
+            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Hewan Disetujui</div>
             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $hewan_diacc}}</div>
           </div>
           <div class="col-auto">
             <i class="fas fa-dog fa-2x text-gray-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Hewan Proses Adopsi</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $hewan_proses }}</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-spinner fa-2x text-gray-300"></i>
           </div>
         </div>
       </div>
@@ -66,7 +81,7 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Kucing Sudah Diadopsi</div>
+              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Hewan Sudah Diadopsi</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $hewan_teradopsi }}</div>
             </div>
             <div class="col-auto">
@@ -76,7 +91,36 @@
         </div>
       </div>
     </div>
-
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Kucing</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $kucing }}</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-cat fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Anjing</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $anjing }}</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-dog fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- Pending Requests Card Example -->
 
 
@@ -85,7 +129,6 @@
   <div class="row">
 
     <!-- Earnings (Monthly) Card Example -->
-
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-primary shadow h-100 py-2">
           <div class="card-body">
@@ -106,7 +149,7 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Testimoni Diterima</div>
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Testimoni Disetujui</div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $testimoni_diacc}}</div>
               </div>
               <div class="col-auto">

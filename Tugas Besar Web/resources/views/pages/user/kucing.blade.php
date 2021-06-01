@@ -62,6 +62,17 @@
                         class="form-control"
                         placeholder="Ras" id="ras">
                 </div>
+                @if($item->adopted=='0')
+                <div class="form-group">
+                    <label for="alamat">No. Handphone</label>
+                    <input
+                    disabled
+                        type="text"
+                        name="no_hp"
+                        value="{{ $item->no_hp }}"
+                        class="form-control"
+                        placeholder="no_hp" id="no_hp">
+                </div>
                 <div class="form-group">
                     <label for="alamat">Alamat</label>
                     <input
@@ -72,6 +83,7 @@
                         class="form-control"
                         placeholder="alamat" id="alamat">
                 </div>
+                @endif
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
                     <input

@@ -35,9 +35,21 @@ class AdminController extends Controller
         ]);
         $pet = new Pet();
         if($validateData['jenis_hewan']==='Kucing'){
-            $pet->kode_hewan = 'KCG-'.rand(100,999);}
+            $db = Pet::latest()->first();
+                if($db!=null){
+                    $urutan = $db->id+1;
+                }else{
+                    $urutan = 1;
+                }
+            $pet->kode_hewan = 'KCG-'.$urutan;}
         elseif($validateData['jenis_hewan']==='Anjing'){
-            $pet->kode_hewan = 'AJG-'.rand(100,999);}
+            $db = Pet::latest()->first();
+                if($db!=null){
+                    $urutan = $db->id+1;
+                }else{
+                    $urutan = 1;
+                }
+            $pet->kode_hewan = 'AJG-'.$urutan;}
         $pet->jenis_hewan = $validateData['jenis_hewan'];
         $pet->usia = $validateData['usia'];
         $pet->jenis_kelamin = $validateData['jenis_kelamin'];
@@ -52,18 +64,24 @@ class AdminController extends Controller
     }
     public function dashboard(){
         $hewan_belum_teradopsi = Pet::where('adopted','0')->count();
-        $hewan_teradopsi = Pet::where('adopted','1')->count();
+        $hewan_proses = Pet::where('adopted','1')->count();
+        $hewan_teradopsi = Pet::where('adopted','2')->count();
         $hewan_diacc = Pet::where('allowed','1')->count();
         $total_hewan = Pet::count();
         $total_testimoni = Testimoni::count();
         $testimoni_diacc = Testimoni::where('allowed','1')->count();
+        $anjing = Pet::where('jenis_hewan','Anjing')->count();
+        $kucing = Pet::where('jenis_hewan','kucing')->count();
         return view('pages.admin.dashboard')->with([
             'hewan_belum_teradopsi' => $hewan_belum_teradopsi,
             'hewan_teradopsi' => $hewan_teradopsi,
             'total_hewan' => $total_hewan,
             'hewan_diacc' => $hewan_diacc,
             'total_testimoni' => $total_testimoni,
-            'testimoni_diacc' => $testimoni_diacc
+            'testimoni_diacc' => $testimoni_diacc,
+            'hewan_proses' => $hewan_proses,
+            'anjing' => $anjing,
+            'kucing' => $kucing
         ]);
     }
     public function edit(Pet $item){
@@ -96,6 +114,12 @@ class AdminController extends Controller
     public function allow(Pet $pet){
         $pet = Pet::findOrFail($pet->id);
         $pet->allowed = '1';
+        $pet->save();
+        return redirect()->route('admin.index');
+    }
+    public function adopted(Pet $pet){
+        $pet = Pet::findOrFail($pet->id);
+        $pet->adopted = '2';
         $pet->save();
         return redirect()->route('admin.index');
     }
